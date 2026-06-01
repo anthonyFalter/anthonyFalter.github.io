@@ -1,0 +1,7 @@
+{
+  "name": "portfolio-static",
+  "private": true,
+  "scripts": {
+    "build": "echo 'Static site - no build step required. Files: index.html, style.css, script.js'"
+  }
+}

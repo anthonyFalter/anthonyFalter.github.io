@@ -186,7 +186,7 @@ html.dark .icon-sun {
   align-items: flex-end;
   padding-top: 7rem;
   padding-bottom: 3rem;
-  margin-right: 10rem;
+  margin-right: 16rem;
 }
 
 .hero-inner {
@@ -216,9 +216,9 @@ html.dark .icon-sun {
 }
 
 .image-placeholder {
-  width: 18rem;
+  width: 12rem;
   aspect-ratio: 1 / 1;
-  max-width: 18rem;
+  max-width: 12rem;
   border-radius: 1.5rem;
   background: #f4f4f5;
   border: 1px dashed #d4d4d8;
@@ -375,6 +375,7 @@ html.dark .divider {
 /* === Sections === */
 .section {
   padding: 2rem 0;
+  margin-top: -2em;
 }
 
 .section-title {

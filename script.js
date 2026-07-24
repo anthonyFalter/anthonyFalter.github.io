@@ -7,36 +7,52 @@ if (stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: d
   html.classList.add('dark');
 }
 
-toggle.addEventListener('click', () => {
-  html.classList.toggle('dark');
-  localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
-});
+if (toggle) {
+  toggle.addEventListener('click', () => {
+    html.classList.toggle('dark');
+    localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+  });
+}
 
 // navbar
 const navbar = document.getElementById('navbar');
 const navLinks = document.querySelectorAll('.nav-link');
-const sections = ['about', 'experience', 'stack', 'projects', 'certs', 'contact'];
+const sections = ['about', 'experience', 'stack', 'projects', 'contact'];
+const currentPath = window.location.pathname;
+const isBlogPage = currentPath.includes('/blog') || currentPath.endsWith('/blog');
 
-window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 10);
+if (navbar) {
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 10);
 
-  let closest = { id: '', dist: Infinity };
-  sections.forEach(id => {
-    const el = document.getElementById(id);
-    if (!el) return;
-    const dist = Math.abs(el.getBoundingClientRect().top);
-    if (dist < closest.dist) closest = { id, dist };
-  });
+    if (isBlogPage) {
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.dataset.section === 'blog');
+      });
+      return;
+    }
 
-  navLinks.forEach(link => {
-    link.classList.toggle('active', link.dataset.section === closest.id);
-  });
-}, { passive: true });
+    let closest = { id: '', dist: Infinity };
+    sections.forEach(id => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const dist = Math.abs(el.getBoundingClientRect().top);
+      if (dist < closest.dist) closest = { id, dist };
+    });
+
+    navLinks.forEach(link => {
+      link.classList.toggle('active', link.dataset.section === closest.id);
+    });
+  }, { passive: true });
+}
 
 // Back to top
-document.getElementById('back-top').addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+const backTopButton = document.getElementById('back-top');
+if (backTopButton) {
+  backTopButton.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
 
 // Project card image carousel
 class ProjectCardCarousel {
@@ -46,7 +62,7 @@ class ProjectCardCarousel {
     this.currentIndex = 0;
     this.isAnimating = false;
     this.carouselInterval = null;
-    
+
     if (this.images.length > 0) {
       this.init();
     }
@@ -78,7 +94,7 @@ class ProjectCardCarousel {
 
   handleHoverStart() {
     this.card.classList.add('expanded');
-    
+
     // Start carousel if multiple images
     if (this.images.length > 1) {
       this.startCarousel();
@@ -120,7 +136,7 @@ class ProjectCardCarousel {
     nextImg.classList.add('active');
 
     this.currentIndex = nextIndex;
-    
+
     setTimeout(() => {
       this.isAnimating = false;
     }, 800); // Wait for fade transition

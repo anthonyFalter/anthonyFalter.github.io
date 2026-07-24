@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="../assets/favicon/refavicon.png" />
+  <title>Blog | Ross Elopre</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+  <nav id="navbar" class="navbar">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">RE</a>
+      <div class="nav-links">
+        <a href="../index.html#about" class="nav-link">About</a>
+        <a href="../index.html#experience" class="nav-link">Experience</a>
+        <a href="../index.html#stack" class="nav-link">Stack</a>
+        <a href="../index.html#projects" class="nav-link">Projects</a>
+        <a href="index.html" class="nav-link active" data-section="blog">Blog</a>
+        <a href="../index.html#contact" class="nav-link">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+    </svg>
+    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="5" />
+      <line x1="12" y1="1" x2="12" y2="3" />
+      <line x1="12" y1="21" x2="12" y2="23" />
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+      <line x1="1" y1="12" x2="3" y2="12" />
+      <line x1="21" y1="12" x2="23" y2="12" />
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+    </svg>
+  </button>
+
+  <main class="blog-page">
+    <section class="section">
+      <div class="container">
+        <div class="blog-hero">
+          <p class="section-title">My Personal</p>
+          <h1 class="hero-name">Blog</h1>
+          <p class="about-text">A collection of blogs I am happy to share with my peers and to every aspiring people in the tech industry.</p>
+        </div>
+
+        <div class="blog-list">
+          <a class="blog-card" href="posts/how_did_I_start_blog_01.html">
+            <div class="blog-card-meta">
+              <span class="blog-card-date">Published July 24, 2026, 10:55 AM</span>
+              <span class="blog-card-tag">Life Story</span>
+            </div>
+            <h2 class="blog-card-title">How did I start?</h2>
+            <p class="blog-card-desc">How did I really start? was it talent or hard work? This blog explains my journey and how I started my journey in the tech field.</p>
+          </a>
+
+          <!-- SAMPLE USAGE: balikan koto if makalimutan ko ehehhehe. 
+            <a class="blog-card" href="posts/first-steps-with-data-analysis.html">
+            <div class="blog-card-meta">
+              <span class="blog-card-date">July 24, 2026</span>
+              <span class="blog-card-tag">Analytics</span>
+            </div>
+            <h2 class="blog-card-title">First Steps in Data Analysis</h2>
+            <p class="blog-card-desc">A practical guide to structuring your first analysis workflow, from question framing to communicating insights clearly.</p>
+          </a> -->
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Ross Elopre</p>
+        <button id="back-top" class="back-top">
+          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="19" x2="12" y2="5" />
+            <polyline points="5 12 12 5 19 12" />
+          </svg>
+          Top
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+
+</html>

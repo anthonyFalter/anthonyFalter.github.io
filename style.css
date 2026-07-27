@@ -83,7 +83,8 @@ html.dark .navbar.scrolled {
 }
 
 .menu-toggle {
-  display: inline-flex;
+  /* hidden by default; shown only on small screens */
+  display: none;
   flex-direction: column;
   justify-content: center;
   gap: 0.25rem;
@@ -129,10 +130,21 @@ html.dark .nav-logo {
 }
 
 .menu-toggle {
-  display: inline-flex;
+  display: none;
+}
+
+@media (max-width: 639px) {
+  .menu-toggle {
+    display: inline-flex;
+  }
+
+  .nav-links {
+    /* nav-links is handled separately below for small screens */
+  }
 }
 
 @media (min-width: 640px) {
+  /* On larger screens hide the mobile toggle and show links inline */
   .menu-toggle {
     display: none;
   }

@@ -137,10 +137,6 @@ html.dark .nav-logo {
   .menu-toggle {
     display: inline-flex;
   }
-
-  .nav-links {
-    /* nav-links is handled separately below for small screens */
-  }
 }
 
 @media (min-width: 640px) {

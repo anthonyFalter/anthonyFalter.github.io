@@ -17,9 +17,25 @@ if (toggle) {
 // navbar
 const navbar = document.getElementById('navbar');
 const navLinks = document.querySelectorAll('.nav-link');
+const menuToggle = document.querySelector('.menu-toggle');
+const mobileNav = document.querySelector('.nav-links');
 const sections = ['about', 'experience', 'stack', 'projects', 'contact'];
 const currentPath = window.location.pathname;
 const isBlogPage = currentPath.includes('/blog') || currentPath.endsWith('/blog');
+
+if (menuToggle && mobileNav) {
+  menuToggle.addEventListener('click', () => {
+    const isOpen = mobileNav.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+
+  mobileNav.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileNav.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+}
 
 if (navbar) {
   window.addEventListener('scroll', () => {

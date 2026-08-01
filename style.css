@@ -299,25 +299,21 @@ html.dark .icon-sun {
 }
 
 .image-placeholder {
-  width: 12rem;
+  width: 10rem;
   aspect-ratio: 1 / 1;
-  max-width: 12rem;
+  max-width: 10rem;
   border-radius: 1.5rem;
   background: #f4f4f5;
-  border: 1px dashed #d4d4d8;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #71717a;
-  font-size: 0.875rem;
-  text-align: center;
-  padding: 1.25rem;
+  border: 1px solid #d4d4d8;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 html.dark .image-placeholder {
   background: rgba(39, 39, 42, 0.8);
   border-color: #3f3f46;
-  color: #a1a1aa;
 }
 
 .hero-tags {

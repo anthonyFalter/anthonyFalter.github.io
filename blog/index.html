@@ -67,11 +67,30 @@
         <div class="blog-grid">
           <aside class="blog-sidebar">
             <div class="filter-panel">
-              <label class="filter-label" for="blog-search">Search blog posts</label>
-              <input id="blog-search" class="filter-search" type="search" placeholder="Search title, description, or genre" />
+              <div class="filter-header">
+                <p class="filter-heading">Find a post</p>
+                <p class="filter-copy">Search by title, description, or genre, then sort the list to surface the best match.</p>
+              </div>
 
-              <p class="filter-title">Genres</p>
-              <div class="filter-genres" id="filter-genres"></div>
+              <div class="filter-group">
+                <label class="filter-label" for="blog-search">Search</label>
+                <input id="blog-search" class="filter-search" type="search" placeholder="Search blog posts" />
+              </div>
+
+              <div class="filter-group">
+                <label class="filter-label" for="blog-sort">Sort by</label>
+                <select id="blog-sort" class="filter-select">
+                  <option value="newest">Newest first</option>
+                  <option value="oldest">Oldest first</option>
+                  <option value="title-asc">Title A–Z</option>
+                  <option value="title-desc">Title Z–A</option>
+                </select>
+              </div>
+
+              <div class="filter-group filter-genre-group">
+                <p class="filter-title">Genres</p>
+                <div class="filter-genres" id="filter-genres"></div>
+              </div>
 
               <button type="button" class="btn btn-outline filter-clear" id="filter-clear">Clear filters</button>
             </div>

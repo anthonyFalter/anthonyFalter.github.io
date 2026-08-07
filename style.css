@@ -946,15 +946,44 @@ html.dark .blog-card-desc {
 }
 
 .filter-panel {
-  padding: 1.25rem;
+  padding: 1.5rem;
   border: 1px solid #e4e4e7;
   border-radius: 1rem;
   background: #fff;
 }
 
 html.dark .filter-panel {
-  background: rgba(9, 9, 11, 0.75);
+  background: rgba(9, 9, 11, 0.78);
   border-color: #27272a;
+}
+
+.filter-header {
+  margin-bottom: 1.5rem;
+}
+
+.filter-heading {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #18181b;
+  margin-bottom: 0.5rem;
+}
+
+html.dark .filter-heading {
+  color: #f4f4f5;
+}
+
+.filter-copy {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #71717a;
+}
+
+html.dark .filter-copy {
+  color: #d4d4d8;
+}
+
+.filter-group {
+  margin-bottom: 1.25rem;
 }
 
 .filter-label,
@@ -973,7 +1002,8 @@ html.dark .filter-title {
   color: #a1a1aa;
 }
 
-.filter-search {
+.filter-search,
+.filter-select {
   width: 100%;
   padding: 0.95rem 1rem;
   border-radius: 0.85rem;
@@ -983,22 +1013,29 @@ html.dark .filter-title {
   transition: border-color 0.2s, background 0.2s;
 }
 
+.filter-select {
+  appearance: none;
+}
+
 .filter-search::placeholder {
   color: #a1a1aa;
 }
 
-html.dark .filter-search {
+html.dark .filter-search,
+html.dark .filter-select {
   background: rgba(39, 39, 42, 0.6);
   border-color: #27272a;
   color: #f4f4f5;
 }
 
-.filter-search:focus {
+.filter-search:focus,
+.filter-select:focus {
   outline: none;
   border-color: #18181b;
 }
 
-html.dark .filter-search:focus {
+html.dark .filter-search:focus,
+html.dark .filter-select:focus {
   border-color: #f4f4f5;
 }
 
@@ -1039,6 +1076,14 @@ html.dark .filter-search:focus {
   color: #18181b;
   font-weight: 700;
   text-decoration: underline;
+}
+
+html.dark .filter-genre-label {
+  color: #d4d4d8;
+}
+
+html.dark .filter-genre input:checked + .filter-genre-label {
+  color: #f4f4f5;
 }
 
 html.dark .filter-genre-label {

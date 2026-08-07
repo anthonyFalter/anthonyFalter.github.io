@@ -178,6 +178,7 @@ function initBlogFilters() {
   if (!blogList) return;
 
   const searchInput = document.getElementById('blog-search');
+  const sortSelect = document.getElementById('blog-sort');
   const genreContainer = document.getElementById('filter-genres');
   const clearButton = document.getElementById('filter-clear');
   const emptyMessage = document.getElementById('blog-empty');
@@ -187,7 +188,9 @@ function initBlogFilters() {
     const title = card.querySelector('.blog-card-title')?.textContent.trim() || '';
     const desc = card.querySelector('.blog-card-desc')?.textContent.trim() || '';
     const tag = card.querySelector('.blog-card-tag')?.textContent.trim() || '';
-    return { card, title, desc, tag };
+    const dateText = card.querySelector('.blog-card-date')?.textContent.replace(/^Published\s+/, '').trim() || '';
+    const dateValue = dateText ? new Date(dateText) : new Date(0);
+    return { card, title, desc, tag, dateValue };
   });
 
   const genres = Array.from(new Set(cardData.map(item => item.tag))).sort();
@@ -214,9 +217,10 @@ function initBlogFilters() {
 
   function updateFilters() {
     const query = searchInput?.value.trim().toLowerCase() || '';
+    const sortValue = sortSelect?.value || 'newest';
     const selectedGenres = Array.from(genreContainer.querySelectorAll('input:checked')).map(input => input.value);
 
-    let visibleCount = 0;
+    const visibleItems = [];
 
     cardData.forEach(({ card, title, desc, tag }) => {
       const matchesSearch = !query || [title, desc, tag].some(value => value.toLowerCase().includes(query));
@@ -224,18 +228,29 @@ function initBlogFilters() {
       const visible = matchesSearch && matchesGenre;
 
       card.style.display = visible ? '' : 'none';
-      if (visible) visibleCount += 1;
+      if (visible) visibleItems.push({ card, title, dateValue: cardData.find(item => item.card === card).dateValue });
     });
 
+    visibleItems.sort((a, b) => {
+      if (sortValue === 'oldest') return a.dateValue - b.dateValue;
+      if (sortValue === 'title-asc') return a.title.localeCompare(b.title);
+      if (sortValue === 'title-desc') return b.title.localeCompare(a.title);
+      return b.dateValue - a.dateValue;
+    });
+
+    visibleItems.forEach(item => blogList.appendChild(item.card));
+
     if (emptyMessage) {
-      emptyMessage.classList.toggle('visible', visibleCount === 0);
+      emptyMessage.classList.toggle('visible', visibleItems.length === 0);
     }
   }
 
   searchInput?.addEventListener('input', updateFilters);
+  sortSelect?.addEventListener('change', updateFilters);
   genreContainer.addEventListener('change', updateFilters);
   clearButton?.addEventListener('click', () => {
     if (searchInput) searchInput.value = '';
+    if (sortSelect) sortSelect.value = 'newest';
     genreContainer.querySelectorAll('input').forEach(input => {
       input.checked = false;
     });

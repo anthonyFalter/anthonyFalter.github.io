@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="../../assets/favicon/refavicon.png" />
+  <title>Applied Statistics and Probability | Ross Elopre</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../style.css" />
+</head>
+
+<body>
+  <nav id="navbar" class="navbar">
+    <div class="nav-inner">
+      <a href="../../index.html" class="nav-logo" aria-label="Home">
+        <img src="../../assets/favicon/refavicon.png" alt="Ross Elopre favicon" />
+      </a>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-links">
+        <a href="../../index.html#about" class="nav-link" data-section="about">About</a>
+        <a href="../../index.html#experience" class="nav-link" data-section="experience">Experience</a>
+        <a href="../../index.html#stack" class="nav-link" data-section="stack">Stack</a>
+        <a href="../../index.html#projects" class="nav-link" data-section="projects">Projects</a>
+        <a href="../index.html" class="nav-link active" data-section="blog">Blog</a>
+        <a href="../../index.html#contact" class="nav-link" data-section="contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+    </svg>
+    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="5" />
+      <line x1="12" y1="1" x2="12" y2="3" />
+      <line x1="12" y1="21" x2="12" y2="23" />
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+      <line x1="1" y1="12" x2="3" y2="12" />
+      <line x1="21" y1="12" x2="23" y2="12" />
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+    </svg>
+  </button>
+
+  <main class="blog-page">
+    <section class="section">
+      <div class="container">
+        <a href="../index.html" class="back-link">← Back to all posts</a>
+        <article class="blog-post">
+          <p class="section-title">Resource</p>
+          <h1 class="hero-name">Open Source Applied Statistics and Probability Learning Resource</h1>
+          <p class="blog-post-meta">July 27, 2026, 9:21 AM · Ross Elopre</p>
+          <div class="blog-post-content">
+            <figure class="blog-banner">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Gaussian_distribution_log-lin_plot.png" alt="Gaussian distribution plotted on a log-linear scale" />
+            </figure>
+            <i><p class="blog-image-reference">Image source: <a href="https://commons.wikimedia.org/wiki/File:Gaussian_distribution_log-lin_plot.png" target="_blank" rel="noopener noreferrer">Gaussian distribution log-lin plot</a>, by Guiding light, CC BY-SA 3.0, via Wikimedia Commons.</p></i>
+            <p>It has been a month since I started Google Advanced Data Analytics Certification and as I dived upon the 'Power Of Statistics' course, I noticed that the concepts are quite challenging but also very interesting. Let's be honest, it's normal for people to forget specific formulas for each statistical concept especially when every information is getting passed to you while you are learning other things.</p>
+            <p>So in response to that, I decided to create a comprehensive resource to help myself remember these concepts more easily. However, while I was in the process of building the project, I realized that other people might have also encountered these problems.</p>
+            <p>I decided to make the repository public so that it will be open to every learner, enthusiasts and people who want a quick reference and challenges related to statistics.</p>
+            <p>In the near future, I plan to expand this resource with more problem sets, along with deploying it as a web application that also visualizes how machine learning algorithms work, how each statistical concept is applied in real-world scenarios, and how it can change your perception in the way you handle your daily tasks.</p>
+            
+            <p>The repository is also open for feedback and contributions. So feel free to share your thoughts and suggestions!</p>
+            <p>Link to the repository: <a href="https://github.com/anthonyFalter/statistics-and-probability-problem-sets"  target="_blank">Click Me!</a></p>
+            <br></br>
+            
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Ross Elopre</p>
+        <button id="back-top" class="back-top">
+          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="19" x2="12" y2="5" />
+            <polyline points="5 12 12 5 19 12" />
+          </svg>
+          Top
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../script.js"></script>
+</body>
+</html>

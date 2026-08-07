@@ -916,7 +916,7 @@ html.dark .blog-card-desc {
 
 @media (min-width: 900px) {
   .blog-grid {
-    grid-template-columns: minmax(0, 1fr) 18rem;
+    grid-template-columns: 18rem minmax(0, 1fr);
     align-items: start;
   }
 }
@@ -1003,39 +1003,49 @@ html.dark .filter-search:focus {
 }
 
 .filter-genres {
-  display: grid;
-  gap: 0.65rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
   margin-bottom: 0.75rem;
 }
 
 .filter-genre {
-  display: flex;
+  position: relative;
+  display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
-  padding: 0.85rem 0.9rem;
-  border-radius: 0.85rem;
-  border: 1px solid #e4e4e7;
-  background: #fafafa;
+  padding: 0.15rem 0;
+  border: none;
+  background: transparent;
   cursor: pointer;
 }
 
-html.dark .filter-genre {
-  background: rgba(39, 39, 42, 0.6);
-  border-color: #27272a;
-}
-
 .filter-genre input {
-  width: 1rem;
-  height: 1rem;
-  accent-color: #18181b;
+  position: absolute;
+  left: -9999px;
 }
 
 .filter-genre-label {
   font-size: 0.85rem;
+  color: #52525b;
+  text-decoration: none;
+  transition: color 0.2s, text-decoration 0.2s;
+}
+
+.filter-genre:hover .filter-genre-label {
+  text-decoration: underline;
+}
+
+.filter-genre input:checked + .filter-genre-label {
   color: #18181b;
+  font-weight: 700;
+  text-decoration: underline;
 }
 
 html.dark .filter-genre-label {
+  color: #d4d4d8;
+}
+
+html.dark .filter-genre input:checked + .filter-genre-label {
   color: #f4f4f5;
 }
 

@@ -64,52 +64,67 @@
           <p class="about-text">A collection of blogs I am happy to share with my peers and to every aspiring people in the tech industry.</p>
         </div>
 
-        <div class="blog-list">
-          <a class="blog-card" href="posts/how_did_I_start_blog_01.html">
-            <div class="blog-card-meta">
-              <span class="blog-card-date">Published July 24, 2026, 10:55 AM</span>
-              <span class="blog-card-tag">Life Story</span>
+        <div class="blog-grid">
+          <main class="blog-main">
+            <div class="blog-controls">
+              <div class="blog-summary">
+                <p class="section-title">Discover posts</p>
+                <p class="about-text">Search by title, description, or genre and refine your results with the filters.</p>
+              </div>
             </div>
-            <h2 class="blog-card-title">How did I start?</h2>
-            <p class="blog-card-desc">How did I really start? was it talent or hard work? This blog explains my journey and how I started my journey in the tech field.</p>
-          </a>
 
-          <a class="blog-card" href="posts/stat_prob_blog_02.html">
-            <div class="blog-card-meta">
-              <span class="blog-card-date">Published July 27, 2026, 9:21 AM</span>
-              <span class="blog-card-tag">Resources</span>
-            </div>
-            <h2 class="blog-card-title">Open Source Applied Statistics and Probability Learning Resource</h2>
-            <p class="blog-card-desc">Take a quick peek at this comprehensive resource for learning applied statistics and probability hosted at my Github.</p>
-          </a>
+            <div class="blog-list">
+              <a class="blog-card" href="posts/how_did_I_start_blog_01.html">
+                <div class="blog-card-meta">
+                  <span class="blog-card-date">Published July 24, 2026, 10:55 AM</span>
+                  <span class="blog-card-tag">Life Story</span>
+                </div>
+                <h2 class="blog-card-title">How did I start?</h2>
+                <p class="blog-card-desc">How did I really start? was it talent or hard work? This blog explains my journey and how I started my journey in the tech field.</p>
+              </a>
 
-          <a class="blog-card" href="posts/power_of_statistics.html">
-            <div class="blog-card-meta">
-              <span class="blog-card-date">Published July 29, 2026, 8:49 AM</span>
-              <span class="blog-card-tag">Data Analytics</span>
-            </div>
-            <h2 class="blog-card-title">The Power of Statistics?</h2>
-            <p class="blog-card-desc">How a single course helped me rethink the way I approach data analysis.</p>
-          </a>
+              <a class="blog-card" href="posts/stat_prob_blog_02.html">
+                <div class="blog-card-meta">
+                  <span class="blog-card-date">Published July 27, 2026, 9:21 AM</span>
+                  <span class="blog-card-tag">Resources</span>
+                </div>
+                <h2 class="blog-card-title">Open Source Applied Statistics and Probability Learning Resource</h2>
+                <p class="blog-card-desc">Take a quick peek at this comprehensive resource for learning applied statistics and probability hosted at my Github.</p>
+              </a>
 
-          <a class="blog-card" href="posts/algorithm_realization.html">
-            <div class="blog-card-meta">
-              <span class="blog-card-date">Published August 6, 2026, 6:46 AM</span>
-              <span class="blog-card-tag">Machine Learning</span>
-            </div>
-            <h2 class="blog-card-title">Algorithm Realization</h2>
-            <p class="blog-card-desc">How the things I learned during my deep research on statistics and regression analysis made me rethink my approach to machine learning.</p>
-          </a>
-          <!-- SAMPLE USAGE: balikan koto if makalimutan ko ehehhehe. 
-            <a class="blog-card" href="posts/first-steps-with-data-analysis.html">
-            <div class="blog-card-meta">
-              <span class="blog-card-date">July 24, 2026</span>
-              <span class="blog-card-tag">Analytics</span>
-            </div>
-            <h2 class="blog-card-title">First Steps in Data Analysis</h2>
-            <p class="blog-card-desc">A practical guide to structuring your first analysis workflow, from question framing to communicating insights clearly.</p>
-          </a> -->
+              <a class="blog-card" href="posts/power_of_statistics.html">
+                <div class="blog-card-meta">
+                  <span class="blog-card-date">Published July 29, 2026, 8:49 AM</span>
+                  <span class="blog-card-tag">Data Analytics</span>
+                </div>
+                <h2 class="blog-card-title">The Power of Statistics?</h2>
+                <p class="blog-card-desc">How a single course helped me rethink the way I approach data analysis.</p>
+              </a>
 
+              <a class="blog-card" href="posts/algorithm_realization.html">
+                <div class="blog-card-meta">
+                  <span class="blog-card-date">Published August 6, 2026, 6:46 AM</span>
+                  <span class="blog-card-tag">Machine Learning</span>
+                </div>
+                <h2 class="blog-card-title">Algorithm Realization</h2>
+                <p class="blog-card-desc">How the things I learned during my deep research on statistics and regression analysis made me rethink my approach to machine learning.</p>
+              </a>
+            </div>
+
+            <p class="blog-empty" id="blog-empty">No blog posts match your search or selected genres.</p>
+          </main>
+
+          <aside class="blog-sidebar">
+            <div class="filter-panel">
+              <label class="filter-label" for="blog-search">Search blog posts</label>
+              <input id="blog-search" class="filter-search" type="search" placeholder="Search title, description, or genre" />
+
+              <p class="filter-title">Genres</p>
+              <div class="filter-genres" id="filter-genres"></div>
+
+              <button type="button" class="btn btn-outline filter-clear" id="filter-clear">Clear filters</button>
+            </div>
+          </aside>
         </div>
       </div>
     </section>

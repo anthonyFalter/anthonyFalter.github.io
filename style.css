@@ -422,10 +422,11 @@ html.dark .btn-primary {
 .btn-outline {
   border: 1px solid #e4e4e7;
   color: #52525b;
+  background: transparent;
 }
 
 .btn-outline:hover {
-  background: #fafafa;
+  background: #f8fafc;
 }
 
 html.dark .btn-outline {
@@ -434,6 +435,27 @@ html.dark .btn-outline {
 }
 
 html.dark .btn-outline:hover {
+  background: rgba(39, 39, 42, 0.5);
+}
+
+.btn.filter-clear {
+  width: 100%;
+  color: #52525b;
+  border: 1px solid #e4e4e7;
+  background: transparent;
+}
+
+.btn.filter-clear:hover {
+  background: #f8fafc;
+}
+
+html.dark .btn.filter-clear {
+  color: #d4d4d8;
+  border: 1px solid #3f3f46;
+  background: transparent;
+}
+
+html.dark .btn.filter-clear:hover {
   background: rgba(39, 39, 42, 0.5);
 }
 

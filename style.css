@@ -1027,8 +1027,8 @@ html.dark .filter-title {
 .filter-search,
 .filter-select {
   width: 100%;
-  padding: 0.95rem 1rem;
-  border-radius: 0.85rem;
+  padding: 0.55rem 1rem;
+  border-radius: 0.55rem;
   border: 1px solid #e4e4e7;
   background: #fafafa;
   color: #18181b;

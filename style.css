@@ -1030,18 +1030,39 @@ html.dark .filter-title {
   padding: 0.55rem 1rem;
   border-radius: 0.5rem;
   border: 1px solid #e4e4e7;
-  background: #fafafa;
+  background: transparent;
   color: #18181b;
   transition: border-color 0.2s, background 0.2s, color 0.2s;
 }
 
 .filter-select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
+  padding-right: 2.5rem; /* space for chevron rendered by wrapper */
+}
+
+/* Wrapper that renders a single chevron icon */
+.select-wrap {
+  position: relative;
+}
+
+.select-wrap::after {
+  content: '';
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0.9rem;
+  height: 0.9rem;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5' fill='none' stroke='%2361616e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
-  background-position: right 1rem center;
-  background-size: 0.9rem 0.9rem;
-  padding-right: 2.5rem;
+  background-size: contain;
+  pointer-events: none;
+}
+
+html.dark .select-wrap::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5' fill='none' stroke='%23f4f4f5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 }
 
 .filter-search::placeholder {
@@ -1053,6 +1074,11 @@ html.dark .filter-select {
   background: rgba(39, 39, 42, 0.7);
   border-color: #27272a;
   color: #f4f4f5;
+}
+
+/* Ensure native select has no background image so wrapper chevron is the only icon */
+.filter-select {
+  background-image: none !important;
 }
 
 .filter-select::-ms-expand {

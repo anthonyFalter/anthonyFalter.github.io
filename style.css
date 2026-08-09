@@ -1098,13 +1098,44 @@ html.dark .filter-select:focus {
 }
 
 .filter-genre input {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid #cfcfcf;
+  border-radius: 4px;
+  display: inline-block;
   position: relative;
-  left: 0;
   margin-right: 0.5rem;
-  width: auto;
-  height: auto;
+  background: transparent;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.filter-genre input::after {
+  content: '';
+  position: absolute;
+  left: 0.28rem;
+  top: 0.08rem;
+  width: 0.22rem;
+  height: 0.5rem;
+  border: solid transparent;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  opacity: 0;
+}
+
+.filter-genre input:checked::after {
+  border-color: #18181b;
   opacity: 1;
-  accent-color: #18181b;
+}
+
+html.dark .filter-genre input {
+  border-color: #444;
+}
+
+html.dark .filter-genre input:checked::after {
+  border-color: #f4f4f5;
 }
 
 .filter-genre-label {

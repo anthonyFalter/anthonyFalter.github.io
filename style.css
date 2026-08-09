@@ -1098,8 +1098,13 @@ html.dark .filter-select:focus {
 }
 
 .filter-genre input {
-  position: absolute;
-  left: -9999px;
+  position: relative;
+  left: 0;
+  margin-right: 0.5rem;
+  width: auto;
+  height: auto;
+  opacity: 1;
+  accent-color: #18181b;
 }
 
 .filter-genre-label {

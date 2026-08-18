@@ -131,40 +131,55 @@
                 </p>
               </li>
               <li><strong>True Negative</strong>
-                <p style="margin-left: 2rem;">- The test result or prediction that is actually false and is correctly classified as false
+                <p style="margin-left: 2rem;">- The test result or prediction that is actually false and is correctly
+                  classified as false
                   <i>(matches the specified conditions).</i>
                 </p>
               </li>
               <li><strong>False Positive</strong>
-                <p style="margin-left: 2rem;">- The test result or prediction that is actually false but is categorized as true.
-                  <i>(Does not match the specified condition, ex: patient doesn't have a deadly illness but is concluded to have one).</i>
+                <p style="margin-left: 2rem;">- The test result or prediction that is actually false but is categorized
+                  as true.
+                  <i>(Does not match the specified condition, ex: patient doesn't have a deadly illness but is concluded
+                    to have one).</i>
                 </p>
               </li>
               <li><strong>False Negative</strong>
-                <p style="margin-left: 2rem;">- The test result or prediction that is actually true but is categorized as false.
-                  <i>(Does not match the specified condition, ex: patient does have a deadly illness but is concluded as none).</i>
+                <p style="margin-left: 2rem;">- The test result or prediction that is actually true but is categorized
+                  as false.
+                  <i>(Does not match the specified condition, ex: patient does have a deadly illness but is concluded as
+                    none).</i>
                 </p>
               </li>
             </ul>
             <br></br>
             <h2>Classification Metrics</h2>
             <h3>1. Accuracy</h3>
-            <p>This metric basically answers: "Out of all the predictions made, how many were correctly classified?". This metric is generally used only on a <strong>balanced</strong> dataset <i>(datasets with equal class importance)</i></p>
+            <p>This metric basically answers: "Out of all the predictions made, how many were correctly classified?".
+              This metric is generally used only on a <strong>balanced</strong> dataset <i>(datasets with equal class
+                importance)</i></p>
             <h4>Formula</h4>
             <p>\[ \frac{\text{TP} + \text{TN}}{\text{TP} + \text{TN} + \text{FP} + \text{FN}} \]</p>
-            <p>In the real world, a great example for this metric is: if a student has finished a quiz and the teacher is now checking that student's work, that teacher will compare the answers to an answer list:</p>  
+            <p>In the real world, a great example for this metric is: if a student has finished a quiz and the teacher
+              is now checking that student's work, that teacher will compare the answers to an answer list:</p>
             <ul style="margin-left: 3rem;">
-              <li><strong>Student's Answer: A | Correct: A</strong> <i>(Correct)</i>
+              <li><strong>Student's Answer: True | Correct: True</strong> <i>(True Positive)</i>
               </li>
-              <li><strong>Student's Answer: B | Correct: A</strong> <i>(Incorrect)</i>
+              <li><strong>Student's Answer: False | Correct: False</strong> <i>(True Negative)</i>
               </li>
-              <li><strong>Student's Answer: C | Correct: C</strong> <i>(Correct)</i>
+              <li><strong>Student's Answer: True | Correct: True</strong> <i>(True Positive)</i>
               </li>
-              <li><strong>Student's Answer: D | Correct: D</strong> <i>(Correct)</i>
+              <li><strong>Student's Answer: False | Correct: True</strong> <i>(False Negative)</i>
               </li>
             </ul>
 
-            We can see that the student
+            <p>
+              We can see that the student got 3 answers correct, and 1 incorrect.
+              In this scenario, by following the formula:
+              \( \frac{2 + 1}{2 + 1 + 1 + 0} \),
+              we get
+              <strong>\( \frac{3}{4} \)</strong>, which is <strong>.75</strong> in decimal, or <strong>75%</strong> in percentage
+            </p>
+            <p>We just got the accuracy! But not all of the time accuracy is the baseline expectation for determining how accurate your model is. When the data is imbalanced, Accuracy falls short when volume is introduced.</p>
           </div>
         </article>
       </div>

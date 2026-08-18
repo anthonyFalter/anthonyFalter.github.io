@@ -194,10 +194,11 @@
             <p>This is where <strong>Precision</strong> comes in. By maximizing precision, you minimize the chances of false positives appearing. But by maximizing precision, you sacrifice recall, which will be introduced in the next part of classification metrics.</p>
             <br></br>
             <h3>3. Recall</h3>
-            <p>This metric answers: "Out of all actual <strong>positive</strong> cases, how many were correctly identified?" unlike Precision, in which the cost of False Positive is high, Recall measures the cost of False Negatives. You generally use Recall when you have zero tolerance for missed cases. A very, very good example for this are: Medical Diagnoses like cancer detections. Missing a patient that does have cancer can be fatal if not handled properly. Earlier in the Precision, I have mentioned that prioritizing one over the other will result in a trade-off. This is because Precision pertains to <strong>missing a real target</strong> whereas, Recall pertains to <strong>making a wrong guess</strong>.</p>
+            <p>This metric answers: "Out of all actual <strong>positive</strong> cases, how many were correctly identified?" unlike Precision, in which the cost of False Positive is high, Recall measures the cost of False Negatives. You generally use Recall when you have zero tolerance for missed cases. A very, very good example for this are: Medical Diagnoses like cancer detections. Missing a patient that does have cancer can be fatal if not handled properly. Earlier in the Precision, I have mentioned that prioritizing one over the other will result in a trade-off. This is because Recall pertains to <strong>missing a real target</strong> whereas, Precision pertains to <strong>making a wrong guess</strong>.</p>
             <h3>Formula</h3>   
             <p>$$\frac{\text{TP}}{\text{TP} + \text{FN}}$$</p>         
             <p>By prioritizing high Recall, you set your sights on not missing anything. However by setting such goals, you also drag in many negative cases, which causes False Positives to spike which, in the formula of Precision is in the denominator's side.</p>
+          
           </div>
         </article>
       </div>

@@ -215,6 +215,7 @@
             <p>This formula is fairly simple and complements F1-score really well. While F1-score weighs both Precision and Recall equally, F<sub>β</sub> allows prioritization of one of metric to your model. This is denoted by the symbol: β which is the weight chosen.<p>
             <h3>Formula</h3>
             <p>$$F_\beta = (1 + \beta^2) \cdot \frac{\text{Precision} \cdot \text{Recall}}{(\beta^2 \cdot \text{Precision}) + \text{Recall}}$$</p>
+            <p>By setting β = 1, you are basically telling the model to weigh both Precision and Recall equally. However, by setting it to β = 0.5, you setting Precision weights higher than recall, and β > 1 for when Recall is more needed than Precision</p>
           </div>
         </article>
       </div>

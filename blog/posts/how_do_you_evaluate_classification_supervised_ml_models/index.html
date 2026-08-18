@@ -207,7 +207,8 @@
             <h3>Formula</h3>
             <p>$$\text{F1-Score} = 2 \cdot \frac{\text{Precision} \cdot \text{Recall}}{\text{Precision} + \text{Recall}}$$</p>
             </p>
-            
+            <p>In the example for accuracy which is about 100 entries about people, and only 2 of the dataset actually have diseases, the Accuracy score would result in 98%, 98% in what exactly? But with the help of F1 metric, both Precision and Recall would return 0% and in turn, 0% F1 metric which means that the model failed to catch actual cases.</p>
+            <p>So, whenever you seeking to balance Precision and Recall because both metrics are important in your model, or because of reasons, I highly recommend experimenting with the F1-score!</p>
           </div>
         </article>
       </div>

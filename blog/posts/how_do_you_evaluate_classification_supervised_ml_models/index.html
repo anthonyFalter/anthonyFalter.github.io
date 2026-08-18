@@ -185,6 +185,7 @@
             <p>The answer is obviously no. It has shown accuracy, but accuracy treats every mistake as identical, which in our example, some errors carry far worse consequence than others. Even though the metric scored 98%, it presented a 0% ability to detect disease.</p>
             <p>This issue, however, is answered by the next few classification metrics.</p>
             <br></br>
+
             <h3>2. Precision</h3>
             <p>This metric answers: "Out of all the positive cases, how many were actually true?". This metric is used when the cost of false positive is high. One good example is for email spam algorithms in which a legitimate email that is not spam is flagged as a spam in which, the unlucky recipient might not end up receiving.</p>
             <h3>Formula</h3>
@@ -193,13 +194,18 @@
             <p>Suppose you are tasked to create an algorithm that will determine if a content is in violation of your company's terms and conditions, and the positive prediction is that the content reported is flagged as a violation, then that specific content will get banned. But in this case, if your false positive is a legitimate content getting banned wrongfully, this will result to poor user retention rate, while also destroying customer's trust.</p>
             <p>This is where <strong>Precision</strong> comes in. By maximizing precision, you minimize the chances of false positives appearing. But by maximizing precision, you sacrifice recall, which will be introduced in the next part of classification metrics.</p>
             <br></br>
+
             <h3>3. Recall</h3>
             <p>This metric answers: "Out of all actual <strong>positive</strong> cases, how many were correctly identified?" unlike Precision, in which the cost of False Positive is high, Recall measures the cost of False Negatives. You generally use Recall when you have zero tolerance for missed cases. A very, very good example for this are: Medical Diagnoses like cancer detections. Missing a patient that does have cancer can be fatal if not handled properly. Earlier in the Precision, I have mentioned that prioritizing one over the other will result in a trade-off. This is because Recall pertains to <strong>missing a real target</strong> whereas, Precision pertains to <strong>making a wrong guess</strong>.</p>
             <h3>Formula</h3>   
             <p>$$\frac{\text{TP}}{\text{TP} + \text{FN}}$$</p>         
-            <p>By prioritizing high Recall, you set your sights on not missing anything. However by setting such goals, you also drag in many negative cases, which causes False Positives to spike which, in the formula of Precision is on the denominator's side.</p>
-          
-          </div>
+            <p>By prioritizing high Recall, you set your sights on not missing anything. However by setting such goals, you also drag in many negative cases, which causes False Positives to spike which, in the formula of Precision is on the denominator's side. So, what if you want to balance both metrics? <strong>F1</strong> will then come to the rescue which will be explained in the next part.</p>
+
+            <br></br>
+            <h3>4. F1-Score</h3>
+            <p>F1 score, or F-measure, or the Harmonic mean of Precision and <Ri:t></Ri:t>ecall, is basically a metric with the range of 0 to 1. It combines both Precision and Recall and heavily penalizes extreme imbalances in both metrics. Unlike accuracy which is only good for balanced datasets, F1 takes the crown for unbalanced datasets.
+          </p>
+            </div>
         </article>
       </div>
     </section>

@@ -848,7 +848,6 @@ html.dark .project-tag {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  margin-bottom: 1.5rem;
 }
 
 .btn {
@@ -882,11 +881,12 @@ html.dark .project-tag {
   padding: 0;
   border: none;
   background: transparent;
-  color: #18181b;
-  font-size: 0.76rem;
-  font-weight: 500;
+  color: #a1a1aa;
+  font-size: 11px;
+  font-weight: 600;
   line-height: 1.2;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   text-decoration: none;
   transition: opacity 0.2s ease;
 }
@@ -896,7 +896,7 @@ html.dark .project-tag {
 }
 
 .view-more-arrow {
-  font-size: 0.95em;
+  font-size: 1.1em;
   line-height: 1;
 }
 
@@ -906,7 +906,7 @@ html.dark .btn-secondary {
 }
 
 html.dark .view-more-btn {
-  color: #f4f4f5;
+  color: #71717a;
 }
 
 .certs-grid {

@@ -998,39 +998,6 @@ html.dark .cert-link-icon {
   text-decoration: none;
   transition: border-color 0.2s, transform 0.2s;
   background: #fff;
-  overflow: hidden;
-  isolation: isolate;
-}
-
-.certificate-card {
-  padding-right: clamp(4.25rem, 24%, 8rem);
-}
-
-.certificate-card::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: min(30%, 8rem);
-  height: 100%;
-  pointer-events: none;
-  background-image: radial-gradient(circle, rgba(113, 113, 122, 0.8) 0 1.25px, transparent 1.4px);
-  background-size: 10px 10px;
-  background-position: 0 0;
-  background-repeat: repeat;
-  opacity: 0.72;
-  mix-blend-mode: multiply;
-  animation: certificate-halftone-shift 14s linear infinite;
-  z-index: 0;
-}
-
-@keyframes certificate-halftone-shift {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 18px 18px;
-  }
 }
 
 .blog-card:hover,
@@ -1043,12 +1010,6 @@ html.dark .blog-card,
 html.dark .certificate-card {
   border-color: #27272a;
   background: rgba(9, 9, 11, 0.7);
-}
-
-html.dark .certificate-card::after {
-  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.38) 0 1.2px, transparent 1.4px);
-  mix-blend-mode: screen;
-  opacity: 0.8;
 }
 
 html.dark .blog-card:hover,

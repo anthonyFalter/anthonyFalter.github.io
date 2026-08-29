@@ -996,6 +996,19 @@ html.dark .cert-link-icon {
   background: #fff;
 }
 
+.certificate-page .blog-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid #e4e4e7;
+  border-radius: 0.75rem;
+  text-decoration: none;
+  transition: border-color 0.2s, transform 0.2s;
+  background: #fff;
+}
+
 .certificate-card {
   position: relative;
   display: flex;
@@ -1010,19 +1023,22 @@ html.dark .cert-link-icon {
 }
 
 .blog-card:hover,
-.certificate-card:hover {
+.certificate-card:hover,
+.certificate-page .blog-card:hover {
   border-color: #a1a1aa;
   transform: translateY(-1px);
 }
 
 html.dark .blog-card,
-html.dark .certificate-card {
+html.dark .certificate-card,
+html.dark .certificate-page .blog-card {
   border-color: #27272a;
   background: rgba(9, 9, 11, 0.7);
 }
 
 html.dark .blog-card:hover,
-html.dark .certificate-card:hover {
+html.dark .certificate-card:hover,
+html.dark .certificate-page .blog-card:hover {
   border-color: #52525b;
 }
 
@@ -1034,7 +1050,8 @@ html.dark .certificate-card:hover {
   margin-bottom: 0.7rem;
 }
 
-.certificate-card-logo {
+.certificate-card-logo,
+.certificate-page .blog-card-logo {
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -1048,7 +1065,8 @@ html.dark .certificate-card:hover {
   background: transparent;
 }
 
-.certificate-card-logo img {
+.certificate-card-logo img,
+.certificate-page .blog-card-logo img {
   width: 100%;
   height: 100%;
   display: block;
@@ -1057,26 +1075,29 @@ html.dark .certificate-card:hover {
   border-radius: 0;
 }
 
-html.dark .certificate-card-logo {
+html.dark .certificate-card-logo,
+html.dark .certificate-page .blog-card-logo {
   background: transparent;
 }
 
-.certificate-card-content {
+.certificate-card-content,
+.certificate-page .blog-card-content {
   flex: 1;
   min-width: 0;
 }
 
 .blog-card-meta,
-.certificate-card-meta {
+.certificate-card-meta,
+.certificate-page .blog-card-meta {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 0.75rem;
-  margin-top: .7rem;
 }
 
 .blog-card-tags,
-.certificate-card-tags {
+.certificate-card-tags,
+.certificate-page .blog-card-tags {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -1084,14 +1105,16 @@ html.dark .certificate-card-logo {
 }
 
 .blog-card-date,
-.certificate-card-date {
+.certificate-card-date,
+.certificate-page .blog-card-date {
   font-size: 0.7rem;
   color: #a1a1aa;
   font-family: 'JetBrains Mono', Menlo, monospace;
 }
 
 .blog-card-tag,
-.certificate-card-tag {
+.certificate-card-tag,
+.certificate-page .blog-card-tag {
   display: inline-flex;
   align-items: center;
   font-size: 10px;

@@ -68,14 +68,14 @@
           <aside class="certificate-sidebar">
             <div class="filter-panel">
               <div class="filter-group">
-                <label class="filter-label" for="certificate-search">Search</label>
-                <input id="certificate-search" class="filter-search" type="search" placeholder="Search certificates" />
+                <label class="filter-label" for="blog-search">Search</label>
+                <input id="blog-search" class="filter-search" type="search" placeholder="Search certificates" />
               </div>
 
               <div class="filter-group">
-                <label class="filter-label" for="certificate-sort">Sort by</label>
+                <label class="filter-label" for="blog-sort">Sort by</label>
                 <div class="select-wrap">
-                  <select id="certificate-sort" class="filter-select">
+                  <select id="blog-sort" class="filter-select">
                     <option value="newest">Newest first</option>
                     <option value="oldest">Oldest first</option>
                     <option value="title-asc">A–Z (Title)</option>
@@ -86,33 +86,33 @@
 
               <div class="filter-group filter-genre-group">
                 <p class="filter-title">Genres</p>
-                <div class="filter-genres" id="certificate-genres"></div>
+                <div class="filter-genres" id="filter-genres"></div>
               </div>
 
-              <button type="button" class="btn filter-clear" id="certificate-clear">Clear filters</button>
+              <button type="button" class="btn filter-clear" id="filter-clear">Clear filters</button>
             </div>
           </aside>
 
-          <main class="certificate-main">
-            <div class="certificate-list">
-              <a class="certificate-card" href="../index.html#projects">
-                <div class="certificate-card-logo" aria-label="Google">
+          <main class="blog-main">
+            <div class="blog-list">
+              <a class="blog-card" href="../index.html#projects">
+                <div class="blog-card-logo" aria-label="Google">
                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/google/google-original.svg" alt="Google" />
                 </div>
-                <div class="certificate-card-content">
-                  <div class="certificate-card-meta">
-                    <div class="certificate-card-tags">
-                      <span class="certificate-card-tag">Data Analytics</span>
-                      <span class="certificate-card-tag">Machine Learning</span>
+                <div class="blog-card-content">
+                  <h2 class="blog-card-title">Advanced Data Analytics</h2>
+                  <p class="blog-card-desc">Google</p>
+                  <div class="blog-card-meta">
+                    <div class="blog-card-tags">
+                      <span class="blog-card-tag">Data Analytics</span>
+                      <span class="blog-card-tag">Machine Learning</span>
                     </div>
                   </div>
-                  <h2 class="certificate-card-title">Advanced Data Analytics</h2>
-                  <p class="certificate-card-desc">Google</p>
                 </div>
               </a>
             </div>
 
-            <p class="certificate-empty" id="certificate-empty">No certificates match your search or selected genres.</p>
+            <p class="blog-empty" id="blog-empty">No certificates match your search or selected genres.</p>
           </main>
         </div>
       </div>

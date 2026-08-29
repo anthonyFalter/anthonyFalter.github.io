@@ -185,6 +185,9 @@ document.querySelectorAll('.project-card[data-images]').forEach(card => {
 
 // Blog search and genre filters
 function initBlogFilters() {
+  const isBlogPage = window.location.pathname.includes('/blog') || window.location.pathname.endsWith('/blog');
+  if (!isBlogPage) return;
+
   const blogList = document.querySelector('.blog-list');
   if (!blogList) return;
 
@@ -328,9 +331,9 @@ function initCertificateFilters() {
     checkbox.id = id;
     checkbox.value = genre;
     checkbox.className = 'filter-checkbox';
-    if (genre === defaultSelectedGenre) {
-      checkbox.checked = true;
-    }
+    const isDefaultSelected = genre === defaultSelectedGenre;
+    checkbox.checked = isDefaultSelected;
+    checkbox.defaultChecked = isDefaultSelected;
 
     const span = document.createElement('span');
     span.className = 'filter-genre-label';

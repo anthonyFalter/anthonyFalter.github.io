@@ -283,26 +283,29 @@ function initBlogFilters() {
 }
 
 function initCertificateFilters() {
-  const certificateList = document.querySelector('.certificate-list');
+  const isCertificatesPage = /\/certificates(?:\/)?$/.test(window.location.pathname);
+  if (!isCertificatesPage) return;
+
+  const certificateList = document.querySelector('.certificate-list') || document.querySelector('.blog-list');
   if (!certificateList) return;
 
-  const searchInput = document.getElementById('certificate-search');
-  const sortSelect = document.getElementById('certificate-sort');
-  const genreContainer = document.getElementById('certificate-filters');
-  const clearButton = document.getElementById('certificate-clear');
-  const emptyMessage = document.getElementById('certificate-empty');
-  const cards = Array.from(certificateList.querySelectorAll('.certificate-card'));
+  const searchInput = document.getElementById('certificate-search') || document.getElementById('blog-search');
+  const sortSelect = document.getElementById('certificate-sort') || document.getElementById('blog-sort');
+  const genreContainer = document.getElementById('certificate-filters') || document.getElementById('filter-genres');
+  const clearButton = document.getElementById('certificate-clear') || document.getElementById('filter-clear');
+  const emptyMessage = document.getElementById('certificate-empty') || document.getElementById('blog-empty');
+  const cards = Array.from(certificateList.querySelectorAll('.certificate-card, .blog-card'));
 
   const cardData = cards.map(card => {
-    const title = card.dataset.title || card.querySelector('.certificate-title')?.textContent.trim() || '';
-    const issuer = card.dataset.issuer || card.querySelector('.certificate-issuer')?.textContent.trim() || '';
+    const title = card.dataset.title || card.querySelector('.certificate-title, .blog-card-title')?.textContent.trim() || '';
+    const issuer = card.dataset.issuer || card.querySelector('.certificate-issuer, .blog-card-desc')?.textContent.trim() || '';
 
     const datasetGenres = (card.dataset.genre || '')
       .split(',')
       .map(value => value.trim())
       .filter(Boolean);
 
-    const pillGenres = Array.from(card.querySelectorAll('.certificate-tag'))
+    const pillGenres = Array.from(card.querySelectorAll('.certificate-tag, .blog-card-tag'))
       .map(tag => tag.textContent.trim())
       .filter(Boolean);
 
@@ -312,6 +315,7 @@ function initCertificateFilters() {
   });
 
   const genres = Array.from(new Set(cardData.flatMap(item => item.tags))).sort();
+  const defaultSelectedGenre = 'Specialization';
 
   genres.forEach(genre => {
     const id = `certificate-genre-${genre.toLowerCase().replace(/\s+/g, '-')}`;
@@ -324,6 +328,9 @@ function initCertificateFilters() {
     checkbox.id = id;
     checkbox.value = genre;
     checkbox.className = 'filter-checkbox';
+    if (genre === defaultSelectedGenre) {
+      checkbox.checked = true;
+    }
 
     const span = document.createElement('span');
     span.className = 'filter-genre-label';

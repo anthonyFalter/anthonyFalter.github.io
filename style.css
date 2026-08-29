@@ -878,7 +878,7 @@ html.dark .project-tag {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  padding: 0;
+  padding: 0.1rem 0.15rem;
   border: none;
   background: transparent;
   color: #a1a1aa;
@@ -888,12 +888,16 @@ html.dark .project-tag {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   text-decoration: none;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease, background-color 0.2s ease, text-decoration-color 0.2s ease;
   margin-bottom: 1.25rem;
 }
 
 .view-more-btn:hover {
-  opacity: 0.8;
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  background: rgba(161, 161, 170, 0.08);
+  border-radius: 0.25rem;
 }
 
 .view-more-arrow {

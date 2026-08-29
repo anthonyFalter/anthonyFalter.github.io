@@ -246,7 +246,7 @@ function initBlogFilters() {
     cardData.forEach(({ card, title, desc, tags, dateValue }) => {
       const searchableText = [title, desc, ...tags].join(' ');
       const matchesSearch = !query || searchableText.toLowerCase().includes(query);
-      const matchesGenre = selectedGenres.length === 0 || selectedGenres.some(genre => tags.includes(genre));
+      const matchesGenre = selectedGenres.length === 0 || selectedGenres.every(genre => tags.includes(genre));
       const visible = matchesSearch && matchesGenre;
 
       card.style.display = visible ? '' : 'none';
@@ -343,7 +343,7 @@ function initCertificateFilters() {
     cardData.forEach(({ card, title, issuer, tags, dateValue }) => {
       const searchableText = [title, issuer, ...tags].join(' ');
       const matchesSearch = !query || searchableText.toLowerCase().includes(query);
-      const matchesGenre = selectedGenres.length === 0 || selectedGenres.some(genre => tags.includes(genre));
+      const matchesGenre = selectedGenres.length === 0 || selectedGenres.every(genre => tags.includes(genre));
       const visible = matchesSearch && matchesGenre;
 
       card.style.display = visible ? '' : 'none';

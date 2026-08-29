@@ -1142,10 +1142,12 @@ html.dark .certificate-card:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 3.25rem;
-  height: 3.25rem;
+  width: 2.25rem;
+  height: 2.25rem;
   overflow: hidden;
   border-radius: 0.7rem;
+  margin-left: .5rem;
+  margin-right: 1rem;
   background: transparent;
 }
 

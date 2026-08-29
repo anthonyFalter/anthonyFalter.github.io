@@ -30,7 +30,7 @@
         <a href="../index.html#experience" class="nav-link" data-section="experience">Experience</a>
         <a href="../index.html#stack" class="nav-link" data-section="stack">Stack</a>
         <a href="../index.html#projects" class="nav-link" data-section="projects">Projects</a>
-        <a href="./" class="nav-link active" data-section="blog">Blog</a>
+        <a href="./" class="nav-link active" data-section="certificates">Certificates</a>
         <a href="../index.html#contact" class="nav-link" data-section="contact">Contact</a>
       </div>
     </div>
@@ -55,27 +55,27 @@
     </svg>
   </button>
 
-  <main class="blog-page">
+  <main class="certificate-page">
     <section class="section">
       <div class="container">
-        <div class="blog-hero">
+        <div class="certificate-hero">
           <p class="section-title">Discover</p>
           <h1 class="hero-name">Certificates</h1>
           <p class="about-text">A collection of my verified credentials spanning Machine Learning, Data Analytics, and core technical disciplines.</p>
         </div>
 
-        <div class="blog-grid">
-          <aside class="blog-sidebar">
+        <div class="certificate-grid">
+          <aside class="certificate-sidebar">
             <div class="filter-panel">
               <div class="filter-group">
-                <label class="filter-label" for="blog-search">Search</label>
-                <input id="blog-search" class="filter-search" type="search" placeholder="Search blog posts" />
+                <label class="filter-label" for="certificate-search">Search</label>
+                <input id="certificate-search" class="filter-search" type="search" placeholder="Search certificates" />
               </div>
 
               <div class="filter-group">
-                <label class="filter-label" for="blog-sort">Sort by</label>
+                <label class="filter-label" for="certificate-sort">Sort by</label>
                 <div class="select-wrap">
-                  <select id="blog-sort" class="filter-select">
+                  <select id="certificate-sort" class="filter-select">
                     <option value="newest">Newest first</option>
                     <option value="oldest">Oldest first</option>
                     <option value="title-asc">A–Z (Title)</option>
@@ -86,71 +86,33 @@
 
               <div class="filter-group filter-genre-group">
                 <p class="filter-title">Genres</p>
-                <div class="filter-genres" id="filter-genres"></div>
+                <div class="filter-genres" id="certificate-genres"></div>
               </div>
 
-              <button type="button" class="btn filter-clear" id="filter-clear">Clear filters</button>
+              <button type="button" class="btn filter-clear" id="certificate-clear">Clear filters</button>
             </div>
           </aside>
 
-          <main class="blog-main">
-            <div class="blog-list">
-              <a class="blog-card" href="posts/how_did_I_start_blog_01/">
-                <div class="blog-card-meta">
-                  <span class="blog-card-date">Published July 24, 2026, 10:55 AM</span>
-                  <span class="blog-card-tag">Life Story</span>
+          <main class="certificate-main">
+            <div class="certificate-list">
+              <a class="certificate-card" href="../index.html#projects">
+                <div class="certificate-card-logo" aria-label="Google">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/google/google-original.svg" alt="Google" />
                 </div>
-                <h2 class="blog-card-title">How did I start?</h2>
-                <p class="blog-card-desc">How did I really start? was it talent or hard work? This blog explains my journey and how I started my journey in the tech field.</p>
-              </a>
-
-              <a class="blog-card" href="posts/stat_prob_blog_02/">
-                <div class="blog-card-meta">
-                  <span class="blog-card-date">Published July 27, 2026, 9:21 AM</span>
-                  <span class="blog-card-tag">Resources</span>
+                <div class="certificate-card-content">
+                  <div class="certificate-card-meta">
+                    <div class="certificate-card-tags">
+                      <span class="certificate-card-tag">Data Analytics</span>
+                      <span class="certificate-card-tag">Machine Learning</span>
+                    </div>
+                  </div>
+                  <h2 class="certificate-card-title">Google Advanced Data Analytics</h2>
+                  <p class="certificate-card-desc">Google</p>
                 </div>
-                <h2 class="blog-card-title">Open Source Applied Statistics and Probability Learning Resource</h2>
-                <p class="blog-card-desc">Take a quick peek at this comprehensive resource for learning applied statistics and probability hosted at my Github.</p>
-              </a>
-
-              <a class="blog-card" href="posts/power_of_statistics/">
-                <div class="blog-card-meta">
-                  <span class="blog-card-date">Published July 29, 2026, 8:49 AM</span>
-                  <span class="blog-card-tag">Data Analytics</span>
-                </div>
-                <h2 class="blog-card-title">The Power of Statistics?</h2>
-                <p class="blog-card-desc">How a single course helped me rethink the way I approach data analysis.</p>
-              </a>
-
-              <a class="blog-card" href="posts/algorithm_realization/">
-                <div class="blog-card-meta">
-                  <span class="blog-card-date">Published August 6, 2026, 6:46 AM</span>
-                  <span class="blog-card-tag">Machine Learning</span>
-                </div>
-                <h2 class="blog-card-title">Algorithm Realization</h2>
-                <p class="blog-card-desc">How the things I learned during my deep research on statistics and regression analysis made me rethink my approach to machine learning.</p>
-              </a>
-
-              <a class="blog-card" href="posts/skill-scarcity/">
-                <div class="blog-card-meta">
-                  <span class="blog-card-date">Published August 9, 2026, 1:56 PM</span>
-                  <span class="blog-card-tag">Data Analytics</span>
-                </div>
-                <h2 class="blog-card-title">Which tech skills take the longest to fill?</h2>
-                <p class="blog-card-desc">In the tech field, upskilling is a very common occurrence when mastering a skill. But there are just some skills that take so long to master that it's affecting the industry. Find out what those factors are, in this interactive data storytelling.</p>
               </a>
             </div>
 
-            <a class="blog-card" href="posts/how_do_you_evaluate_classification_supervised_ml_models/">
-                <div class="blog-card-meta">
-                  <span class="blog-card-date">Published August 18, 2026, 7:42 AM</span>
-                  <span class="blog-card-tag">Resources</span>
-                </div>
-                <h2 class="blog-card-title">How do you evaluate Machine Learning models using classification metrics?</h2>
-                <p class="blog-card-desc">Learn how key metrics like accuracy, precision, recall, F1, and F-beta are used to evaluate machine learning models in real-world applications.</p>
-              </a>
-
-            <p class="blog-empty" id="blog-empty">No blog posts match your search or selected genres.</p>
+            <p class="certificate-empty" id="certificate-empty">No certificates match your search or selected genres.</p>
           </main>
         </div>
       </div>

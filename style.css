@@ -1090,21 +1090,27 @@ html.dark .certificate-empty {
 }
 
 /* === Blog === */
-.blog-page {
+.blog-page,
+.certificate-page {
   padding-top: 4.5rem;
 }
 
-.blog-hero {
+.blog-hero,
+.certificate-hero {
   margin-bottom: 2rem;
 }
 
-.blog-list {
+.blog-list,
+.certificate-list {
   display: grid;
   gap: 0.75rem;
 }
 
-.blog-card {
-  display: block;
+.blog-card,
+.certificate-card {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
   padding: 1rem 1.1rem;
   border: 1px solid #e4e4e7;
   border-radius: 0.75rem;
@@ -1113,35 +1119,84 @@ html.dark .certificate-empty {
   background: #fff;
 }
 
-.blog-card:hover {
+.blog-card:hover,
+.certificate-card:hover {
   border-color: #a1a1aa;
   transform: translateY(-1px);
 }
 
-html.dark .blog-card {
+html.dark .blog-card,
+html.dark .certificate-card {
   border-color: #27272a;
   background: rgba(9, 9, 11, 0.7);
 }
 
-html.dark .blog-card:hover {
+html.dark .blog-card:hover,
+html.dark .certificate-card:hover {
   border-color: #52525b;
 }
 
-.blog-card-meta {
+.blog-card-logo,
+.certificate-card-logo {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.25rem;
+  height: 3.25rem;
+  overflow: hidden;
+  border-radius: 0.7rem;
+  background: transparent;
+}
+
+.blog-card-logo img,
+.certificate-card-logo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  border: 0;
+  border-radius: 0;
+}
+
+html.dark .blog-card-logo,
+html.dark .certificate-card-logo {
+  background: transparent;
+}
+
+.blog-card-content,
+.certificate-card-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.blog-card-meta,
+.certificate-card-meta {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 0.75rem;
   margin-bottom: 0.5rem;
 }
 
-.blog-card-date {
+.blog-card-tags,
+.certificate-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.blog-card-date,
+.certificate-card-date {
   font-size: 0.7rem;
   color: #a1a1aa;
   font-family: 'JetBrains Mono', Menlo, monospace;
 }
 
-.blog-card-tag {
+.blog-card-tag,
+.certificate-card-tag {
+  display: inline-flex;
+  align-items: center;
   font-size: 10px;
   font-family: 'JetBrains Mono', Menlo, monospace;
   padding: 0.125rem 0.5rem;
@@ -1150,49 +1205,58 @@ html.dark .blog-card:hover {
   color: #71717a;
 }
 
-html.dark .blog-card-date {
+html.dark .blog-card-date,
+html.dark .certificate-card-date {
   color: #71717a;
 }
 
-html.dark .blog-card-tag {
+html.dark .blog-card-tag,
+html.dark .certificate-card-tag {
   background: rgba(39, 39, 42, 0.7);
   color: #d4d4d8;
 }
 
-.blog-card-title {
+.blog-card-title,
+.certificate-card-title {
   font-size: 0.95rem;
   font-weight: 600;
   color: #18181b;
   margin-bottom: 0.35rem;
 }
 
-html.dark .blog-card-title {
+html.dark .blog-card-title,
+html.dark .certificate-card-title {
   color: #f4f4f5;
 }
 
-.blog-card-desc {
+.blog-card-desc,
+.certificate-card-desc {
   font-size: 0.8rem;
   line-height: 1.6;
   color: #71717a;
 }
 
-html.dark .blog-card-desc {
+html.dark .blog-card-desc,
+html.dark .certificate-card-desc {
   color: #d4d4d8;
 }
 
-.blog-grid {
+.blog-grid,
+.certificate-grid {
   display: grid;
   gap: 1.5rem;
 }
 
 @media (min-width: 900px) {
-  .blog-grid {
+  .blog-grid,
+  .certificate-grid {
     grid-template-columns: 18rem minmax(0, 1fr);
     align-items: start;
   }
 }
 
-.blog-main {
+.blog-main,
+.certificate-main {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
@@ -1212,7 +1276,8 @@ html.dark .blog-card-desc {
   }
 }
 
-.blog-sidebar {
+.blog-sidebar,
+.certificate-sidebar {
   position: relative;
 }
 
@@ -1450,7 +1515,8 @@ html.dark .filter-genre input:checked + .filter-genre-label {
   width: 100%;
 }
 
-.blog-empty {
+.blog-empty,
+.certificate-empty {
   display: none;
   padding: 1.2rem 1rem;
   border-radius: 0.75rem;
@@ -1460,12 +1526,14 @@ html.dark .filter-genre input:checked + .filter-genre-label {
   text-align: center;
 }
 
-html.dark .blog-empty {
+html.dark .blog-empty,
+html.dark .certificate-empty {
   background: rgba(39, 39, 42, 0.65);
   color: #d4d4d8;
 }
 
-.blog-empty.visible {
+.blog-empty.visible,
+.certificate-empty.visible {
   display: block;
 }
 

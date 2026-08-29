@@ -1102,6 +1102,7 @@ html.dark .certificate-page .blog-card-logo {
   flex-wrap: wrap;
   align-items: center;
   gap: 0.4rem;
+  margin-top: .7rem;
 }
 
 .blog-card-date,
@@ -1142,6 +1143,7 @@ html.dark .certificate-card-tag {
   font-weight: 600;
   color: #18181b;
   margin-bottom: 0.35rem;
+  margin-top: .5rem;
 }
 
 html.dark .blog-card-title,

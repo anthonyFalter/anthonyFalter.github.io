@@ -889,6 +889,7 @@ html.dark .project-tag {
   text-transform: uppercase;
   text-decoration: none;
   transition: opacity 0.2s ease;
+  margin-bottom: 1.25rem;
 }
 
 .view-more-btn:hover {

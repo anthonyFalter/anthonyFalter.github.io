@@ -187,13 +187,23 @@ function initBlogFilters() {
   const cardData = cards.map(card => {
     const title = card.querySelector('.blog-card-title')?.textContent.trim() || '';
     const desc = card.querySelector('.blog-card-desc')?.textContent.trim() || '';
-    const tag = card.querySelector('.blog-card-tag')?.textContent.trim() || '';
+
+    const datasetGenres = (card.dataset.genre || '')
+      .split(',')
+      .map(value => value.trim())
+      .filter(Boolean);
+
+    const pillGenres = Array.from(card.querySelectorAll('.blog-card-tag'))
+      .map(tag => tag.textContent.trim())
+      .filter(Boolean);
+
+    const tags = Array.from(new Set([...datasetGenres, ...pillGenres]));
     const dateText = card.querySelector('.blog-card-date')?.textContent.replace(/^Published\s+/, '').trim() || '';
     const dateValue = dateText ? new Date(dateText) : new Date(0);
-    return { card, title, desc, tag, dateValue };
+    return { card, title, desc, tags, dateValue };
   });
 
-  const genres = Array.from(new Set(cardData.map(item => item.tag))).sort();
+  const genres = Array.from(new Set(cardData.flatMap(item => item.tags))).sort();
 
   genres.forEach(genre => {
     const id = `genre-${genre.toLowerCase().replace(/\s+/g, '-')}`;
@@ -222,13 +232,14 @@ function initBlogFilters() {
 
     const visibleItems = [];
 
-    cardData.forEach(({ card, title, desc, tag }) => {
-      const matchesSearch = !query || [title, desc, tag].some(value => value.toLowerCase().includes(query));
-      const matchesGenre = selectedGenres.length === 0 || selectedGenres.includes(tag);
+    cardData.forEach(({ card, title, desc, tags, dateValue }) => {
+      const searchableText = [title, desc, ...tags].join(' ');
+      const matchesSearch = !query || searchableText.toLowerCase().includes(query);
+      const matchesGenre = selectedGenres.length === 0 || selectedGenres.some(genre => tags.includes(genre));
       const visible = matchesSearch && matchesGenre;
 
       card.style.display = visible ? '' : 'none';
-      if (visible) visibleItems.push({ card, title, dateValue: cardData.find(item => item.card === card).dateValue });
+      if (visible) visibleItems.push({ card, title, dateValue });
     });
 
     visibleItems.sort((a, b) => {
@@ -274,12 +285,22 @@ function initCertificateFilters() {
   const cardData = cards.map(card => {
     const title = card.dataset.title || card.querySelector('.certificate-title')?.textContent.trim() || '';
     const issuer = card.dataset.issuer || card.querySelector('.certificate-issuer')?.textContent.trim() || '';
-    const tag = card.dataset.genre || card.querySelector('.certificate-tag')?.textContent.trim() || '';
+
+    const datasetGenres = (card.dataset.genre || '')
+      .split(',')
+      .map(value => value.trim())
+      .filter(Boolean);
+
+    const pillGenres = Array.from(card.querySelectorAll('.certificate-tag'))
+      .map(tag => tag.textContent.trim())
+      .filter(Boolean);
+
+    const tags = Array.from(new Set([...datasetGenres, ...pillGenres]));
     const dateValue = card.dataset.date ? new Date(card.dataset.date) : new Date(0);
-    return { card, title, issuer, tag, dateValue };
+    return { card, title, issuer, tags, dateValue };
   });
 
-  const genres = Array.from(new Set(cardData.map(item => item.tag))).sort();
+  const genres = Array.from(new Set(cardData.flatMap(item => item.tags))).sort();
 
   genres.forEach(genre => {
     const id = `certificate-genre-${genre.toLowerCase().replace(/\s+/g, '-')}`;
@@ -308,14 +329,15 @@ function initCertificateFilters() {
 
     const visibleItems = [];
 
-    cardData.forEach(({ card, title, issuer, tag }) => {
-      const matchesSearch = !query || [title, issuer, tag].some(value => value.toLowerCase().includes(query));
-      const matchesGenre = selectedGenres.length === 0 || selectedGenres.includes(tag);
+    cardData.forEach(({ card, title, issuer, tags, dateValue }) => {
+      const searchableText = [title, issuer, ...tags].join(' ');
+      const matchesSearch = !query || searchableText.toLowerCase().includes(query);
+      const matchesGenre = selectedGenres.length === 0 || selectedGenres.some(genre => tags.includes(genre));
       const visible = matchesSearch && matchesGenre;
 
       card.style.display = visible ? '' : 'none';
       if (visible) {
-        visibleItems.push({ card, title, dateValue: cardData.find(item => item.card === card).dateValue });
+        visibleItems.push({ card, title, dateValue });
       }
     });
 

@@ -185,7 +185,8 @@ document.querySelectorAll('.project-card[data-images]').forEach(card => {
 
 // Blog search and genre filters
 function initBlogFilters() {
-  const isBlogPage = window.location.pathname.includes('/blog') || window.location.pathname.endsWith('/blog');
+  const pageUrl = `${window.location.pathname}${window.location.search}${window.location.hash}`;
+  const isBlogPage = pageUrl.includes('/blog') || pageUrl.endsWith('/blog');
   if (!isBlogPage) return;
 
   const blogList = document.querySelector('.blog-list');
@@ -286,7 +287,8 @@ function initBlogFilters() {
 }
 
 function initCertificateFilters() {
-  const isCertificatesPage = /\/certificates(?:\/)?$/.test(window.location.pathname);
+  const pageUrl = `${window.location.pathname}${window.location.search}${window.location.hash}`;
+  const isCertificatesPage = pageUrl.includes('/certificates') || pageUrl.endsWith('/certificates');
   if (!isCertificatesPage) return;
 
   const certificateList = document.querySelector('.certificate-list') || document.querySelector('.blog-list');

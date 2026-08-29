@@ -875,8 +875,37 @@ html.dark .project-tag {
   color: #18181b;
 }
 
+.view-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #18181b;
+  font-size: 0.76rem;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.view-more-btn:hover {
+  opacity: 0.8;
+}
+
+.view-more-arrow {
+  font-size: 0.95em;
+  line-height: 1;
+}
+
 html.dark .btn-secondary {
   border-color: #27272a;
+  color: #f4f4f5;
+}
+
+html.dark .view-more-btn {
   color: #f4f4f5;
 }
 

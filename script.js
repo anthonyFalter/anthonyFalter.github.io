@@ -22,6 +22,33 @@ const mobileNav = document.querySelector('.nav-links');
 const sections = ['about', 'experience', 'stack', 'projects', 'contact'];
 const currentPath = window.location.pathname;
 const isBlogPage = currentPath.includes('/blog') || currentPath.endsWith('/blog');
+const isCertificatesPage = currentPath.includes('/certificates') || currentPath.endsWith('/certificates');
+
+function updateNavState() {
+  navLinks.forEach(link => {
+    const isActive =
+      (isBlogPage && link.dataset.section === 'blog') ||
+      (isCertificatesPage && link.dataset.section === 'certificates') ||
+      (!isBlogPage && !isCertificatesPage && link.dataset.section === 'about');
+
+    link.classList.toggle('active', isActive);
+  });
+
+  if (!isBlogPage && !isCertificatesPage) {
+    let closest = { id: '', dist: Infinity };
+    sections.forEach(id => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const dist = Math.abs(el.getBoundingClientRect().top);
+      if (dist < closest.dist) closest = { id, dist };
+    });
+
+    navLinks.forEach(link => {
+      const isSectionActive = link.dataset.section === closest.id;
+      link.classList.toggle('active', isSectionActive);
+    });
+  }
+}
 
 if (menuToggle && mobileNav) {
   menuToggle.addEventListener('click', () => {
@@ -38,27 +65,11 @@ if (menuToggle && mobileNav) {
 }
 
 if (navbar) {
+  updateNavState();
+
   window.addEventListener('scroll', () => {
     navbar.classList.toggle('scrolled', window.scrollY > 10);
-
-    if (isBlogPage) {
-      navLinks.forEach(link => {
-        link.classList.toggle('active', link.dataset.section === 'blog');
-      });
-      return;
-    }
-
-    let closest = { id: '', dist: Infinity };
-    sections.forEach(id => {
-      const el = document.getElementById(id);
-      if (!el) return;
-      const dist = Math.abs(el.getBoundingClientRect().top);
-      if (dist < closest.dist) closest = { id, dist };
-    });
-
-    navLinks.forEach(link => {
-      link.classList.toggle('active', link.dataset.section === closest.id);
-    });
+    updateNavState();
   }, { passive: true });
 }
 

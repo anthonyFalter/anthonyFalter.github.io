@@ -83,7 +83,7 @@ html.dark .navbar.scrolled {
 }
 
 .menu-toggle {
-  /* hidden by default; shown only on small screens */
+  /* default hidden, shown pag small yung screen */
   display: none;
   flex-direction: column;
   justify-content: center;

@@ -260,4 +260,93 @@ function initBlogFilters() {
   updateFilters();
 }
 
+function initCertificateFilters() {
+  const certificateList = document.querySelector('.certificate-list');
+  if (!certificateList) return;
+
+  const searchInput = document.getElementById('certificate-search');
+  const sortSelect = document.getElementById('certificate-sort');
+  const genreContainer = document.getElementById('certificate-filters');
+  const clearButton = document.getElementById('certificate-clear');
+  const emptyMessage = document.getElementById('certificate-empty');
+  const cards = Array.from(certificateList.querySelectorAll('.certificate-card'));
+
+  const cardData = cards.map(card => {
+    const title = card.dataset.title || card.querySelector('.certificate-title')?.textContent.trim() || '';
+    const issuer = card.dataset.issuer || card.querySelector('.certificate-issuer')?.textContent.trim() || '';
+    const tag = card.dataset.genre || card.querySelector('.certificate-tag')?.textContent.trim() || '';
+    const dateValue = card.dataset.date ? new Date(card.dataset.date) : new Date(0);
+    return { card, title, issuer, tag, dateValue };
+  });
+
+  const genres = Array.from(new Set(cardData.map(item => item.tag))).sort();
+
+  genres.forEach(genre => {
+    const id = `certificate-genre-${genre.toLowerCase().replace(/\s+/g, '-')}`;
+    const label = document.createElement('label');
+    label.className = 'filter-genre';
+    label.htmlFor = id;
+
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.id = id;
+    checkbox.value = genre;
+    checkbox.className = 'filter-checkbox';
+
+    const span = document.createElement('span');
+    span.className = 'filter-genre-label';
+    span.textContent = genre;
+
+    label.append(checkbox, span);
+    genreContainer.append(label);
+  });
+
+  function updateFilters() {
+    const query = searchInput?.value.trim().toLowerCase() || '';
+    const sortValue = sortSelect?.value || 'newest';
+    const selectedGenres = Array.from(genreContainer.querySelectorAll('input:checked')).map(input => input.value);
+
+    const visibleItems = [];
+
+    cardData.forEach(({ card, title, issuer, tag }) => {
+      const matchesSearch = !query || [title, issuer, tag].some(value => value.toLowerCase().includes(query));
+      const matchesGenre = selectedGenres.length === 0 || selectedGenres.includes(tag);
+      const visible = matchesSearch && matchesGenre;
+
+      card.style.display = visible ? '' : 'none';
+      if (visible) {
+        visibleItems.push({ card, title, dateValue: cardData.find(item => item.card === card).dateValue });
+      }
+    });
+
+    visibleItems.sort((a, b) => {
+      if (sortValue === 'oldest') return a.dateValue - b.dateValue;
+      if (sortValue === 'title-asc') return a.title.localeCompare(b.title);
+      if (sortValue === 'title-desc') return b.title.localeCompare(a.title);
+      return b.dateValue - a.dateValue;
+    });
+
+    visibleItems.forEach(item => certificateList.appendChild(item.card));
+
+    if (emptyMessage) {
+      emptyMessage.classList.toggle('visible', visibleItems.length === 0);
+    }
+  }
+
+  searchInput?.addEventListener('input', updateFilters);
+  sortSelect?.addEventListener('change', updateFilters);
+  genreContainer.addEventListener('change', updateFilters);
+  clearButton?.addEventListener('click', () => {
+    if (searchInput) searchInput.value = '';
+    if (sortSelect) sortSelect.value = 'newest';
+    genreContainer.querySelectorAll('input').forEach(input => {
+      input.checked = false;
+    });
+    updateFilters();
+  });
+
+  updateFilters();
+}
+
 initBlogFilters();
+initCertificateFilters();

@@ -1,5 +1,6 @@
 # Ross Elopre Portfolio
-This is my personal portfolio website designed to host whatever I'm currently focused on, goals I have set and stories I have to share.
+This is my personal portfolio website designed to host whatever I'm currently focused on, goals I have set and stories I have to share. 
+I developed this website without the frameworks in mind to put my web design skills to the test.
 
 ## Project Structure
 

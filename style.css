@@ -1474,30 +1474,22 @@ html.dark .filter-genre input:checked+.filter-genre-label {
 
 .filter-genre-count {
   margin-left: auto;
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   color: #a1a1aa;
-  background: rgba(0, 0, 0, 0.06);
-  border-radius: 999px;
-  padding: 0.05rem 0.45rem;
-  min-width: 1.2rem;
-  text-align: center;
   font-variant-numeric: tabular-nums;
-  transition: color 0.2s, background 0.2s;
+  transition: color 0.2s;
 }
 
 html.dark .filter-genre-count {
-  color: #71717a;
-  background: rgba(255, 255, 255, 0.08);
+  color: #52525b;
 }
 
 .filter-genre input:checked~.filter-genre-count {
-  color: #52525b;
-  background: rgba(0, 0, 0, 0.1);
+  color: #71717a;
 }
 
 html.dark .filter-genre input:checked~.filter-genre-count {
-  color: #a1a1aa;
-  background: rgba(255, 255, 255, 0.12);
+  color: #71717a;
 }
 
 .filter-clear {

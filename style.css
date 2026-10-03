@@ -140,6 +140,7 @@ html.dark .nav-logo {
 }
 
 @media (min-width: 640px) {
+
   /* On larger screens hide the mobile toggle and show links inline */
   .menu-toggle {
     display: none;
@@ -532,7 +533,7 @@ html.dark .timeline-line {
   position: relative;
 }
 
-.timeline-item + .timeline-item {
+.timeline-item+.timeline-item {
   margin-top: 1rem;
 }
 
@@ -668,6 +669,7 @@ html.dark .stack-tag {
     opacity: 0;
     transform: translateY(-10px);
   }
+
   to {
     max-height: 500px;
     opacity: 1;
@@ -807,6 +809,7 @@ html.dark .project-link-icon {
 .project-card:hover .project-link-icon {
   color: #71717a;
 }
+
 html.dark .project-card:hover .project-link-icon {
   color: #a1a1aa;
 }
@@ -1204,6 +1207,7 @@ html.dark .certificate-card-desc {
 }
 
 @media (min-width: 900px) {
+
   .blog-grid,
   .certificate-grid {
     grid-template-columns: 18rem minmax(0, 1fr);
@@ -1309,7 +1313,8 @@ html.dark .filter-title {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  padding-right: 2.5rem; /* space for chevron rendered by wrapper */
+  padding-right: 2.5rem;
+  /* space for chevron rendered by wrapper */
 }
 
 /* Wrapper that renders a single chevron icon */
@@ -1445,7 +1450,7 @@ html.dark .filter-genre input:checked::after {
   text-decoration: underline;
 }
 
-.filter-genre input:checked + .filter-genre-label {
+.filter-genre input:checked+.filter-genre-label {
   color: #18181b;
   font-weight: 700;
   text-decoration: underline;
@@ -1455,7 +1460,7 @@ html.dark .filter-genre-label {
   color: #d4d4d8;
 }
 
-html.dark .filter-genre input:checked + .filter-genre-label {
+html.dark .filter-genre input:checked+.filter-genre-label {
   color: #f4f4f5;
 }
 
@@ -1463,7 +1468,7 @@ html.dark .filter-genre-label {
   color: #d4d4d8;
 }
 
-html.dark .filter-genre input:checked + .filter-genre-label {
+html.dark .filter-genre input:checked+.filter-genre-label {
   color: #f4f4f5;
 }
 
@@ -1485,12 +1490,12 @@ html.dark .filter-genre-count {
   background: rgba(255, 255, 255, 0.08);
 }
 
-.filter-genre input:checked ~ .filter-genre-count {
+.filter-genre input:checked~.filter-genre-count {
   color: #52525b;
   background: rgba(0, 0, 0, 0.1);
 }
 
-html.dark .filter-genre input:checked ~ .filter-genre-count {
+html.dark .filter-genre input:checked~.filter-genre-count {
   color: #a1a1aa;
   background: rgba(255, 255, 255, 0.12);
 }
@@ -1690,12 +1695,15 @@ html.dark .cert-card:hover .cert-link-icon {
   margin-right: 5px;
   transition: color 0.2s;
 }
+
 .cert-card:hover .cert-link-icon {
   color: #71717a;
 }
+
 html.dark .cert-link-icon {
   color: #3f3f46;
 }
+
 html.dark .cert-card:hover .cert-link-icon {
   color: #a1a1aa;
 }

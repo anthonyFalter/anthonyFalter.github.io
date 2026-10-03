@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="../../../assets/favicon/refavicon.png" />
+  <title>How do you evaluate Machine Learning models using classification metrics? | Ross Elopre</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../../../style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+  <nav id="navbar" class="navbar">
+    <div class="nav-inner">
+      <a href="../../../index.html" class="nav-logo" aria-label="Home">
+        <img src="../../../assets/favicon/refavicon.png" alt="Ross Elopre favicon" />
+      </a>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-links">
+        <a href="../../../index.html#about" class="nav-link" data-section="about">About</a>
+        <a href="../../../index.html#experience" class="nav-link" data-section="experience">Experience</a>
+        <a href="../../../index.html#stack" class="nav-link" data-section="stack">Stack</a>
+        <a href="../../../index.html#projects" class="nav-link" data-section="projects">Projects</a>
+        <a href="../../index.html" class="nav-link active" data-section="blog">Blog</a>
+        <a href="../../../index.html#contact" class="nav-link" data-section="contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+    </svg>
+    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="5" />
+      <line x1="12" y1="1" x2="12" y2="3" />
+      <line x1="12" y1="21" x2="12" y2="23" />
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+      <line x1="1" y1="12" x2="3" y2="12" />
+      <line x1="21" y1="12" x2="23" y2="12" />
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+    </svg>
+  </button>
+
+  <main class="blog-page">
+    <section class="section">
+      <div class="container">
+        <a href="../../index.html" class="back-link">← Back to all posts</a>
+        <article class="blog-post">
+          <p class="section-title">Resources</p>
+          <h1 class="hero-name">How do you evaluate Supervised Machine Learning models using classification metrics?
+          </h1>
+          <p class="blog-post-meta">August 18, 2026, 7:42 AM · Ross Elopre</p>
+          <div class="blog-post-content">
+            <figure class="blog-banner">
+              <img
+                src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&h=450&q=80"
+                alt="Dark Code Syntax Screen Banner" referrerpolicy="no-referrer" />
+            </figure>
+            <br></br>
+            <p>As I was working on a small machine learning project about classifying each pixel's color in an image of
+              a flower bouquet using K-Means algorithm to practice my skills, I have found that evaluation metrics
+              differ from model to model. Metrics like Accuracy, Recall, and F1 only applied to my recent sandbox
+              project in which I used naive bayes <i>(GaussianNB)</i> to predict NBA players that is likely to continue
+              within 5 years using continuous features.</p>
+            <p>The evaluation metrics I used in the nba classification model however, didn't really apply to the pixel
+              color clustering model. This is because of both model's innate nature, in which pixel clustering uses
+              K-Means algorithm, which is an <strong>unsupervised</strong> learning model, while the NBA classification
+              model is a <strong>supervised</strong> model.</p>
+            <br></br>
+            <h2>Supervised? Unsupervised?</h2>
+            <p><strong>Supervised Learning</strong> is basically a type of machine learning that uses predictor/s and
+              outcome variables in which, both variables must be labeled <i>(already classified)</i>, and that the model
+              should have a <strong>training</strong> <i>(basically the student's answers to the test)</i>, and
+              <strong>testing</strong> <i>(basically the test's answer keys)</i> data.
+            </p>
+            <p>In <strong>Unsupervised Learning</strong> however, it doesn't have these testing and training datasets
+              because it doesn't need one to begin with! one example is the pixel clustering project I made in which it
+              <strong>clusters</strong> pixel colors using K-Means algorithm <i>(More in-depth explanation about types
+                of algorithms, and metrics used for each algorithm in later blogs)</i> from the word cluster, it
+              basically groups up every pixel based on their context using intelligent mathematical algorithms. So the
+              reason unsupervised learning doesn't need testing and training datasets is because instead of predicting
+              outcomes like how supervised learning works, unsupervised learning finds the hidden patterns, similarities
+              within the dataset.
+            </p>
+            <br></br>
+            <h2>Key Classification Metrics used for Supervised Learning</h2>
+            <p>In this part, I will be talking about the key classification metrics used for supervised learnings. I
+              will be doing a comprehensive walkthrough towards their differences, when and where they are applied, and
+              actual usage examples, so sit back and enjoy the show!</p>
+            <h3>Types of classification metrics</h3>
+            <ul style="margin-left: 3rem;">
+              <li>Accuracy</li>
+              <li>Precision</li>
+              <li>Recall</li>
+              <li>F1</li>
+              <li>F-Beta</li>
+            </ul>
+            <p><i>Not all metrics will be listed here like: ROC-AUC, Cross-Entropy Loss because I am planning to do an
+                ever deeper dive on those topics in future blogs!</i></p>
+            <br></br>
+            <figure class="blog-banner"
+              style="max-height: 250px; overflow: hidden; display: flex; align-items: center; justify-content: center; background-color: #ffffff;">
+              <img
+                src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 450' style='background:%23ffffff;font-family:sans-serif;font-weight:bold;'><text x='310' y='40' font-size='28' text-anchor='middle'>Predicted</text><text x='210' y='80' font-size='24' text-anchor='middle'>Positive</text><text x='410' y='80' font-size='24' text-anchor='middle'>Negative</text><text x='30' y='270' font-size='28' text-anchor='middle' transform='rotate(-90, 30, 270)'>Actual</text><text x='90' y='195' font-size='22' text-anchor='end'>Positive</text><text x='90' y='345' font-size='22' text-anchor='end'>Negative</text><rect x='110' y='100' width='200' height='150' fill='%23fef3d6' stroke='%23000' stroke-width='3'/><text x='210' y='190' font-size='42' text-anchor='middle'>TP</text><rect x='310' y='100' width='200' height='150' fill='%23cbe3f7' stroke='%23000' stroke-width='3'/><text x='410' y='190' font-size='42' text-anchor='middle'>FN</text><rect x='110' y='250' width='200' height='150' fill='%23cbe3f7' stroke='%23000' stroke-width='3'/><text x='210' y='340' font-size='42' text-anchor='middle'>FP</text><rect x='310' y='250' width='200' height='150' fill='%23fef3d6' stroke='%23000' stroke-width='3'/><text x='410' y='340' font-size='42' text-anchor='middle'>TN</text></svg>"
+                alt="2x2 Confusion Matrix Diagram (TP, FP, FN, TN)"
+                style="max-height: 250px; width: auto; object-fit: contain; background-color: #ffffff;" />
+            </figure>
+            <h3>Confusion Matrix</h3>
+            <p>Before diving into those metrics, we must first learn the foundation behind these terminologies.
+              Confusion Matrix is basically a table used to evaluate the performance of a classification model. It
+              compares predicted label against the actual labels and is split into 4 primary categories:</p>
+            <ul style="margin-left: 3rem;">
+              <li><strong>True Positive</strong>
+                <p style="margin-left: 2rem;">- The test result or prediction that is actually true and correct
+                  <i>(matches the specified conditions).</i>
+                </p>
+              </li>
+              <li><strong>True Negative</strong>
+                <p style="margin-left: 2rem;">- The test result or prediction that is actually false and is correctly
+                  classified as false
+                  <i>(matches the specified conditions).</i>
+                </p>
+              </li>
+              <li><strong>False Positive</strong>
+                <p style="margin-left: 2rem;">- The test result or prediction that is actually false but is categorized
+                  as true.
+                  <i>(Does not match the specified condition, ex: patient doesn't have a deadly illness but is concluded
+                    to have one).</i>
+                </p>
+              </li>
+              <li><strong>False Negative</strong>
+                <p style="margin-left: 2rem;">- The test result or prediction that is actually true but is categorized
+                  as false.
+                  <i>(Does not match the specified condition, ex: patient does have a deadly illness but is concluded as
+                    none).</i>
+                </p>
+              </li>
+            </ul>
+            <br></br>
+            <h2>Classification Metrics</h2>
+            <h3>1. Accuracy</h3>
+            <p>This metric basically answers: "Out of all the predictions made, how many were correctly classified?".
+              This metric is generally used only on a <strong>balanced</strong> dataset <i>(datasets with equal class
+                importance)</i></p>
+            <h4>Formula</h4>
+            <p>\[ \frac{\text{TP} + \text{TN}}{\text{TP} + \text{TN} + \text{FP} + \text{FN}} \]</p>
+            <p>In the real world, a great example for this metric is: if a student has finished a quiz and the teacher
+              is now checking that student's work, that teacher will compare the answers to an answer list:</p>
+            <ul style="margin-left: 3rem;">
+              <li><strong>Student's Answer: True | Correct: True</strong> <i>(True Positive)</i>
+              </li>
+              <li><strong>Student's Answer: False | Correct: False</strong> <i>(True Negative)</i>
+              </li>
+              <li><strong>Student's Answer: True | Correct: True</strong> <i>(True Positive)</i>
+              </li>
+              <li><strong>Student's Answer: False | Correct: True</strong> <i>(False Negative)</i>
+              </li>
+            </ul>
+
+            <p>
+              We can see that the student got 3 answers correct, and 1 incorrect.
+              In this scenario, by following the formula:
+              \( \frac{2 + 1}{2 + 1 + 1 + 0} \),
+              we get
+              <strong>\( \frac{3}{4} \)</strong>, which is <strong>.75</strong> in decimal, or <strong>75%</strong> in percentage
+            </p>
+            <p>We just got the accuracy! But not all of the time accuracy is the baseline expectation for determining how accurate your model is. When the data is imbalanced, Accuracy falls short when the majority classes overshadow the minority.</p>
+            <br></br>
+            <p>An example for this is a: dataset with 100 entries about people with diseases. Imagine the entries of that dataset has 98 people are healthy, and only 2 of which does have diseases present. If you plug its values to the formula we used earlier, it will boast a 98% accuracy, but was it able to detect a single patient that has the diseases?</p>
+            <p>The answer is obviously no. It has shown accuracy, but accuracy treats every mistake as identical, which in our example, some errors carry far worse consequence than others. Even though the metric scored 98%, it presented a 0% ability to detect disease.</p>
+            <p>This issue, however, is answered by the next few classification metrics.</p>
+            <br></br>
+
+            <h3>2. Precision</h3>
+            <p>This metric answers: "Out of all the positive cases, how many were actually true?". This metric is used when the cost of false positive is high. One good example is for email spam algorithms in which a legitimate email that is not spam is flagged as a spam in which, the unlucky recipient might not end up receiving.</p>
+            <h3>Formula</h3>
+            <p>$$\frac{\text{TP}}{\text{TP} + \text{FP}}$$</p>
+            <p>An example for when precision is generally better to use is in: Content Moderation setups:</p>
+            <p>Suppose you are tasked to create an algorithm that will determine if a content is in violation of your company's terms and conditions, and the positive prediction is that the content reported is flagged as a violation, then that specific content will get banned. But in this case, if your false positive is a legitimate content getting banned wrongfully, this will result to poor user retention rate, while also destroying customer's trust.</p>
+            <p>This is where <strong>Precision</strong> comes in. By maximizing precision, you minimize the chances of false positives appearing. But by maximizing precision, you sacrifice recall, which will be introduced in the next part of classification metrics.</p>
+            <br></br>
+
+            <h3>3. Recall</h3>
+            <p>This metric answers: "Out of all actual <strong>positive</strong> cases, how many were correctly identified?" unlike Precision, in which the cost of False Positive is high, Recall measures the cost of False Negatives. You generally use Recall when you have zero tolerance for missed cases. A very, very good example for this are: Medical Diagnoses like cancer detections. Missing a patient that does have cancer can be fatal if not handled properly. Earlier in the Precision, I have mentioned that prioritizing one over the other will result in a trade-off. This is because Recall pertains to <strong>missing a real target</strong> whereas, Precision pertains to <strong>making a wrong guess</strong>.</p>
+            <h3>Formula</h3>   
+            <p>$$\frac{\text{TP}}{\text{TP} + \text{FN}}$$</p>         
+            <p>By prioritizing high Recall, you set your sights on not missing anything. However by setting such goals, you also drag in many negative cases, which causes False Positives to spike which, in the formula of Precision is on the denominator's side. So, what if you want to balance both metrics? <strong>F1</strong> will then come to the rescue which will be explained in the next part.</p>
+
+            <br></br>
+            <h3>4. F1-Score</h3>
+            <p>F1 score, or F-measure, or the Harmonic mean of Precision and Recall, is basically a metric with the range of 0 to 1. It combines both Precision and Recall and heavily penalizes extreme imbalances in both metrics. Unlike accuracy which is only good for balanced datasets, F1 takes the crown for unbalanced datasets.
+            <h3>Formula</h3>
+            <p>$$\text{F1-Score} = 2 \cdot \frac{\text{Precision} \cdot \text{Recall}}{\text{Precision} + \text{Recall}}$$</p>
+            </p>
+            <p>In the example for accuracy which is about 100 entries about people, and only 2 of the dataset actually have diseases, the Accuracy score would result in 98%, 98% in what exactly? But with the help of F1 metric, both Precision and Recall would return 0% and in turn, 0% F1 metric which means that the model failed to catch actual cases.</p>
+            <p>So, whenever you seeking to balance Precision and Recall because both metrics are important in your model, or because of reasons, I highly recommend experimenting with the F1-score!</p>
+            
+            <br></br>
+            <h3>5. F<sub>β</sub> (F-Beta)</h3>
+            <p>This metric is fairly simple and complements F1-score really well. While F1-score weighs both Precision and Recall equally, F<sub>β</sub> allows prioritization of one of metric to your model. This is denoted by the symbol: β which is the weight chosen.<p>
+            <h3>Formula</h3>
+            <figure class="blog-banner"
+  style="max-height: 350px; overflow: hidden; display: flex; align-items: center; justify-content: center; background-color: #ffffff;">
+  <img
+    src="https://i.imgur.com/tqb79K7.png"
+    referrerpolicy="no-referrer"
+    alt="F-beta Score vs Beta Values Curve Graph"
+    style="max-height: 350px; width: auto; object-fit: contain; background-color: #ffffff;" />
+</figure>
+            <p>$$F_\beta = (1 + \beta^2) \cdot \frac{\text{Precision} \cdot \text{Recall}}{(\beta^2 \cdot \text{Precision}) + \text{Recall}}$$</p>
+            <p>By setting β = 1, you are basically telling the model to weigh both Precision and Recall equally. However, by setting it to β = 0.5, you're setting Precision weights higher than recall, and β > 1 for when Recall is more needed than Precision</p>
+            
+            <br></br>
+            <h2>Conclusion</h2>
+            <p>Never rely on a single metric, It is better to spread the eggs on different baskets rather than losing them all at once, in our case, missing out on very crucial data. Remember: Accuracy alone doesn't define how accurate your model is. A model with 98% Accuracy can easily hide a broken model.</p>
+            <p>This concludes the things that I know and is happy to share with everyone. If you have inquiries, feel free to contact me via my socials so we can tackle it!</p>
+            <p>Stay tuned for my next blogs about machine learning metrics!</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Ross Elopre</p>
+        <button id="back-top" class="back-top">
+          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="19" x2="12" y2="5" />
+            <polyline points="5 12 12 5 19 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../../script.js"></script>
+</body>
+
+</html>

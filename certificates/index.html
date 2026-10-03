@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="../assets/favicon/refavicon.png" />
+  <title>Certificates | Ross Elopre</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+  <nav id="navbar" class="navbar">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo" aria-label="Home">
+        <img src="../assets/favicon/refavicon.png" alt="Ross Elopre favicon" />
+      </a>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-links">
+        <a href="../index.html#about" class="nav-link" data-section="about">About</a>
+        <a href="../index.html#experience" class="nav-link" data-section="experience">Experience</a>
+        <a href="../index.html#stack" class="nav-link" data-section="stack">Stack</a>
+        <a href="../index.html#projects" class="nav-link" data-section="projects">Projects</a>
+        <a href="../blog/" class="nav-link" data-section="blog">Blog</a>
+        <a href="./" class="nav-link active" data-section="certificates">Certificates</a>
+        <a href="../index.html#contact" class="nav-link" data-section="contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+    </svg>
+    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="5" />
+      <line x1="12" y1="1" x2="12" y2="3" />
+      <line x1="12" y1="21" x2="12" y2="23" />
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+      <line x1="1" y1="12" x2="3" y2="12" />
+      <line x1="21" y1="12" x2="23" y2="12" />
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+    </svg>
+  </button>
+
+  <main class="certificate-page">
+    <section class="section">
+      <div class="container">
+        <div class="certificate-hero">
+          <p class="section-title">Discover</p>
+          <h1 class="hero-name">Certificates</h1>
+          <p class="about-text">A collection of my verified credentials spanning Machine Learning, Data Analytics, and core technical disciplines.</p>
+        </div>
+
+        <div class="certificate-grid">
+          <aside class="certificate-sidebar">
+            <div class="filter-panel">
+              <div class="filter-group">
+                <label class="filter-label" for="blog-search">Search</label>
+                <input id="blog-search" class="filter-search" type="search" placeholder="Search certificates" />
+              </div>
+
+              <div class="filter-group">
+                <label class="filter-label" for="blog-sort">Sort by</label>
+                <div class="select-wrap">
+                  <select id="blog-sort" class="filter-select">
+                    <option value="newest">Newest first</option>
+                    <option value="oldest">Oldest first</option>
+                    <option value="title-asc">A–Z (Title)</option>
+                    <option value="title-desc">Z–A (Title)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="filter-group filter-genre-group">
+                <p class="filter-title">Genres</p>
+                <div class="filter-genres" id="filter-genres"></div>
+              </div>
+
+              <button type="button" class="btn filter-clear" id="filter-clear">Clear filters</button>
+            </div>
+          </aside>
+
+          <main class="blog-main">
+            <div class="blog-list">
+              <a class="blog-card" href="https://www.credly.com/badges/abc2f4f7-e9bf-4884-9aa6-9218abd6d583/public_url" target="_blank" rel="noopener noreferrer">
+                <div class="blog-card-logo" aria-label="Google">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/google/google-original.svg" alt="Google" />
+                </div>
+                <div class="blog-card-content">
+                  <h2 class="blog-card-title">Advanced Data Analytics</h2>
+                  <p class="blog-card-desc">Google</p>
+                  <div class="blog-card-meta">
+                    <div class="blog-card-tags">
+                      <span class="blog-card-tag">Specialization</span>
+                      <span class="blog-card-tag">Data Analytics</span>
+                      <span class="blog-card-tag">Machine Learning</span>
+                    </div>
+                  </div>
+                </div>
+                <svg class="cert-link-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </a>
+
+              <!-- Cisco Data Analytics Essentials -->
+              <a class="blog-card" href="https://www.credly.com/badges/62b35ecb-8980-4646-8092-2fb044e3cc5d/public_url" target="_blank" rel="noopener noreferrer">
+                <div class="blog-card-logo" aria-label="Google">
+                  <img src="https://cdn.brandfetch.io/cisco.com/w/400/h/400/logo" alt="Cisco Networking Academy" />
+                </div>
+                <div class="blog-card-content">
+                  <h2 class="blog-card-title">Data Analytics Essentials</h2>
+                  <p class="blog-card-desc">Cisco Networking Academy</p>
+                  <div class="blog-card-meta">
+                    <div class="blog-card-tags">
+                      <span class="blog-card-tag">Specialization</span>
+                      <span class="blog-card-tag">Data Analytics</span>
+                    </div>
+                  </div>
+                </div>
+                <svg class="cert-link-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </a>
+
+              <!-- Cisco Data Science with Python-->
+              <a class="blog-card" href="https://www.credly.com/badges/0b1acde8-b04a-4aeb-a7cb-efa0ec8e913a/public_url" target="_blank" rel="noopener noreferrer">
+                <div class="blog-card-logo" aria-label="Google">
+                  <img src="https://cdn.brandfetch.io/cisco.com/w/400/h/400/logo" alt="Cisco Networking Academy" />
+                </div>
+                <div class="blog-card-content">
+                  <h2 class="blog-card-title">Data Science with Python</h2>
+                  <p class="blog-card-desc">Cisco Networking Academy</p>
+                  <div class="blog-card-meta">
+                    <div class="blog-card-tags">
+                      <span class="blog-card-tag">Specialization</span>
+                      <span class="blog-card-tag">Data Analytics</span>
+                    </div>
+                  </div>
+                </div>
+                <svg class="cert-link-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </a>
+
+              <!-- Advance Analytics Capstone -->
+              <a class="blog-card" href="https://coursera.org/share/4e47c3749e8b39b37b58e053daf5f92c" target="_blank" rel="noopener noreferrer">
+                <div class="blog-card-logo" aria-label="Google">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/google/google-original.svg" alt="Google" />
+                </div>
+                <div class="blog-card-content">
+                  <h2 class="blog-card-title">Advanced Analytics Capstone</h2>
+                  <p class="blog-card-desc">Google</p>
+                  <div class="blog-card-meta">
+                    <div class="blog-card-tags">
+                      <span class="blog-card-tag">Course</span>
+                      <span class="blog-card-tag">Data Analytics</span>
+                      <span class="blog-card-tag">Machine Learning</span>
+                    </div>
+                  </div>
+                </div>
+                <svg class="cert-link-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </a>
+
+              <!-- Advance Analytics Nuts_Bolts -->
+              <a class="blog-card" href="https://coursera.org/share/545bb67ce6c84b667e69aee8814faca8" target="_blank" rel="noopener noreferrer">
+                <div class="blog-card-logo" aria-label="Google">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/google/google-original.svg" alt="Google" />
+                </div>
+                <div class="blog-card-content">
+                  <h2 class="blog-card-title">Nuts and Bolts of Machine Learning</h2>
+                  <p class="blog-card-desc">Google</p>
+                  <div class="blog-card-meta">
+                    <div class="blog-card-tags">
+                      <span class="blog-card-tag">Course</span>
+                      <span class="blog-card-tag">Data Analytics</span>
+                      <span class="blog-card-tag">Machine Learning</span>
+                    </div>
+                  </div>
+                </div>
+                <svg class="cert-link-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </a>
+
+              <!-- Advance Analytics Regression Analysis -->
+              <a class="blog-card" href="https://coursera.org/share/356f41a3f78814991051c042251eef3e" target="_blank" rel="noopener noreferrer">
+                <div class="blog-card-logo" aria-label="Google">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/google/google-original.svg" alt="Google" />
+                </div>
+                <div class="blog-card-content">
+                  <h2 class="blog-card-title">Regression Analysis</h2>
+                  <p class="blog-card-desc">Google</p>
+                  <div class="blog-card-meta">
+                    <div class="blog-card-tags">
+                      <span class="blog-card-tag">Course</span>
+                      <span class="blog-card-tag">Data Analytics</span>
+                    </div>
+                  </div>
+                </div>
+                <svg class="cert-link-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </a>
+
+              <!-- Advance Analytics Power of Statistics -->
+              <a class="blog-card" href="https://coursera.org/share/883a3c748ba488a64971d97be92da5dc" target="_blank" rel="noopener noreferrer">
+                <div class="blog-card-logo" aria-label="Google">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/google/google-original.svg" alt="Google" />
+                </div>
+                <div class="blog-card-content">
+                  <h2 class="blog-card-title">Power of Statistics</h2>
+                  <p class="blog-card-desc">Google</p>
+                  <div class="blog-card-meta">
+                    <div class="blog-card-tags">
+                      <span class="blog-card-tag">Course</span>
+                      <span class="blog-card-tag">Data Analytics</span>
+                    </div>
+                  </div>
+                </div>
+                <svg class="cert-link-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </a>
+
+              <!-- Foundations of Data Science -->
+              <a class="blog-card" href="https://coursera.org/share/c1e3c6da4141fd9ddf893ba5109a690c" target="_blank" rel="noopener noreferrer">
+                <div class="blog-card-logo" aria-label="Google">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/google/google-original.svg" alt="Google" />
+                </div>
+                <div class="blog-card-content">
+                  <h2 class="blog-card-title">Foundations of Data Science</h2>
+                  <p class="blog-card-desc">Google</p>
+                  <div class="blog-card-meta">
+                    <div class="blog-card-tags">
+                      <span class="blog-card-tag">Course</span>
+                      <span class="blog-card-tag">Data Analytics</span>
+                    </div>
+                  </div>
+                </div>
+                <svg class="cert-link-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </a>
+            </div>
+
+            <p class="blog-empty" id="blog-empty">Try adjusting your search or filter criteria.</p>
+          </main>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Ross Elopre</p>
+        <button id="back-top" class="back-top">
+          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="19" x2="12" y2="5" />
+            <polyline points="5 12 12 5 19 12" />
+          </svg>
+          Top
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+
+</html>

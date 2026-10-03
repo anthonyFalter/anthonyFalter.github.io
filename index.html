@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="assets/favicon/refavicon.png" />
+  <title>Ross Elopre</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Home">
+        <img src="assets/favicon/refavicon.png" alt="Ross Elopre favicon" />
+      </a>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-links">
+        <a href="#about" class="nav-link" data-section="about">About</a>
+        <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+        <a href="#stack" class="nav-link" data-section="stack">Stack</a>
+        <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+        <a href="blog/" class="nav-link" data-section="blog">Blog</a>
+        <a href="certificates/" class="nav-link" data-section="certificates">Certificates</a>
+        <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Theme Toggle -->
+  <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+    </svg>
+    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="5" />
+      <line x1="12" y1="1" x2="12" y2="3" />
+      <line x1="12" y1="21" x2="12" y2="23" />
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+      <line x1="1" y1="12" x2="3" y2="12" />
+      <line x1="21" y1="12" x2="23" y2="12" />
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+    </svg>
+  </button>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-image">
+          <img class="image-placeholder" src="assets/commons/profile/pfp_g15_t15_h15.png" alt="Ross Elopre portrait" />
+        </div>
+
+        <div class="hero-text">
+          <div class="hero-location">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            <span>Manila, Philippines</span>
+          </div>
+          <h1 class="hero-name">Ross Elopre</h1>
+          <div class="hero-tags">
+            <span class="tag">Machine Learning</span>
+            <span class="tag">AI Technologies</span>
+            <span class="tag">Data Analytics</span>
+          </div>
+          <div class="hero-actions">
+            <a href="mailto:rosselopre.business@gmail.com" class="btn btn-primary">
+              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              Get in Touch
+            </a>
+            <a href="https://www.linkedin.com/in/ross-elopre" target="_blank" rel="noopener noreferrer"
+              class="hero-social-link" aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+            <a href="https://github.com/anthonyFalter" target="_blank" rel="noopener noreferrer" class="hero-social-link"
+              aria-label="GitHub">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="divider hero-divider"></div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">About</h2>
+      <p class="about-text">
+        I am an IT student who loves experimenting with anything related to Data and Artificial Intelligence. I believe
+        no data should ever be treated as trivial; we must look beneath the surface, because raw data holds little value
+        until it is transformed into actionable insights and in turn, a competitive advantage.
+      </p>
+
+      <p class="about-text">
+        My curiosity about how decisions are made naturally drew me to the science behind decision-making, leading me to
+        focus on Machine Learning and Artificial Intelligence. I am currently upskilling in Data Science and am actively
+        looking for collaborations and opportunities where I can put my skills to the test.
+      </p>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="section">
+    <div class="container">
+      <h2 class="section-title">Experience</h2>
+      <div class="timeline">
+        <div class="timeline-line"></div>
+
+        <div class="timeline-item">
+          <span class="timeline-year">2024</span>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3 class="timeline-role">Internship</h3>
+            <p class="timeline-company">DICT Philippines</p>
+            <p class="timeline-desc">
+            <ul>
+              <li class="timeline-desc-list-item">Preprocessed large-scale data for major DICT government projects,
+                reducing the team's processing time by ~20%
+              </li>
+              <li class="timeline-desc-list-item">Managed records, prepared materials, and administrative records across
+                multiple cross-functional departments.</li>
+              <li class="timeline-desc-list-item">Developed structured data logs, significantly aiding in data retrieval
+                speed of the team by ~10%.</li>
+            </ul>
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <span class="timeline-year">2023</span>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3 class="timeline-role">print("Hello, World!")</h3>
+            <p class="timeline-desc">The very start of my journey into the world of analytics!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech Stack -->
+  <section id="stack" class="section">
+    <div class="container">
+      <h2 class="section-title">Tech Stack</h2>
+      <div class="stack-grid">
+        <div class="stack-category">
+          <h3 class="stack-heading">Core Engineering</h3>
+          <div class="stack-tags">
+            <span class="stack-tag">HTML</span>
+            <span class="stack-tag">CSS</span>
+            <span class="stack-tag">JavaScript</span>
+            <span class="stack-tag">Tailwind CSS</span>
+            <span class="stack-tag">Java</span>
+          </div>
+        </div>
+        <div class="stack-category">
+          <h3 class="stack-heading">Data & Analytics</h3>
+          <div class="stack-tags">
+            <span class="stack-tag">Python</span>
+            <span class="stack-tag">Pandas</span>
+            <span class="stack-tag">NumPy</span>
+            <span class="stack-tag">Scikit-learn</span>
+            <span class="stack-tag">TensorFlow</span>
+            <span class="stack-tag">PostgreSQL</span>
+            <span class="stack-tag">T-SQL</span>
+          </div>
+        </div>
+        <div class="stack-category">
+          <h3 class="stack-heading">Tools</h3>
+          <div class="stack-tags">
+            <span class="stack-tag">Tableau</span>
+            <span class="stack-tag">PowerBI</span>
+            <span class="stack-tag">Excel</span>
+            <span class="stack-tag">Google BigQuery</span>
+            <span class="stack-tag">Microsoft SSMS</span>
+            <span class="stack-tag">Streamlit</span>
+            <span class="stack-tag">Git</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title">Recent Projects</h2>
+      <div class="projects-grid">
+        <a href="https://github.com/anthonyFalter/ergatility-app" class="project-card" target="_blank"
+          data-images="assets/project-images/ergatility-churn/ef1.png,assets/project-images/ergatility-churn/ef2.png,assets/project-images/ergatility-churn/ef3.png">
+          <div class="project-images">
+            <div class="project-image-container"></div>
+          </div>
+          <div class="project-content">
+            <div class="project-header">
+              <h3 class="project-title">Ergatility: Employee Turnover Prediction</h3>
+              <svg class="project-link-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+            </div>
+            <p class="project-desc">Implemented core MLOps, ML, and a RESTful API to deploy a scalable prediction
+              engine, transforming complex employee metrics into automated churn risk insights.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Machine Learning</span>
+              <span class="project-tag">MLOps</span>
+              <span class="project-tag">Python</span>
+              <span class="project-tag">Docker</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://mavenshowcase.com/project/56553" class="project-card" target="_blank"
+          data-images="assets/project-images/nyc-analysis/dashboardimageshowcase1.png,assets/project-images/nyc-analysis/dashboardimageshowcase2.png,assets/project-images/nyc-analysis/dashboardimageshowcase3.png,assets/project-images/nyc-analysis/dashboardimageshowcase4.png,assets/project-images/nyc-analysis/dashboardimageshowcase5.png,assets/project-images/nyc-analysis/dashboardimageshowcase6.png,assets/project-images/nyc-analysis/dashboardimageshowcase7.png">
+          <div class="project-images">
+            <div class="project-image-container"></div>
+          </div>
+          <div class="project-content">
+            <div class="project-header">
+              <h3 class="project-title">NYC Accident Analysis</h3>
+              <svg class="project-link-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+            </div>
+            <p class="project-desc">Comprehensive analysis of NYC Traffic using extensive ETL process and a sleek,
+              modern
+              final dashboard output.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Analytics</span>
+              <span class="project-tag">PowerBI</span>
+              <span class="project-tag">Python</span>
+              <span class="project-tag">T-SQL</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://mavenshowcase.com/project/56631" class="project-card" target="_blank"
+          data-images="assets/project-images/ceurope-analysis/dbimage1.png,assets/project-images/ceurope-analysis/dbimage2.png,assets/project-images/ceurope-analysis/dbimage3.png">
+          <div class="project-images">
+            <div class="project-image-container"></div>
+          </div>
+          <div class="project-content">
+            <div class="project-header">
+              <h3 class="project-title">Post-Flood Commercial Recovery Index</h3>
+              <svg class="project-link-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+            </div>
+            <p class="project-desc"><I></I>Interactive, high-governance executive tracking system to monitor
+              macroeconomic recovery and business disruption following the catastrophic Central Europe floods of
+              September 2024.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Analytics</span>
+              <span class="project-tag">Tableau</span>
+              <span class="project-tag">Python</span>
+              <span class="project-tag">T-SQL</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://github.com/anthonyFalter/lodging-price-optimization-model" class="project-card" target="_blank"
+          data-images="assets/project-images/lodging-price-optimization-model/mlimage1.png,assets/project-images/lodging-price-optimization-model/mlimage2.png,assets/project-images/lodging-price-optimization-model/mlimage3.png">
+          <div class="project-images">
+            <div class="project-image-container"></div>
+          </div>
+          <div class="project-content">
+            <div class="project-header">
+              <h3 class="project-title">Lodging Price Optimization Model</h3>
+              <svg class="project-link-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+            </div>
+            <p class="project-desc"><I></I>An ongoing machine learning project designed to predict Airbnb nightly
+              lodging prices. The project focuses on implementing and comparing Random Forest and XGBoost algorithms to
+              evaluate performance differences when handling mixed data types.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Machine Learning</span>
+              <span class="project-tag">Python</span>
+              <span class="project-tag">scikit-learn</span>
+              <span class="project-tag">streamlit</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="../blog/posts/skill-scarcity/" class="project-card" target="_blank"
+          data-images="assets/project-images/skill-scarcity-by-duration/graph1.png,assets/project-images/skill-scarcity-by-duration/graph2.png,assets/project-images/skill-scarcity-by-duration/graph3.png,assets/project-images/skill-scarcity-by-duration/graph4.png,assets/project-images/skill-scarcity-by-duration/graph5.png">
+          <div class="project-images">
+            <div class="project-image-container"></div>
+          </div>
+          <div class="project-content">
+            <div class="project-header">
+              <h3 class="project-title">Tech Skills That Take the Longest to Fill</h3>
+              <svg class="project-link-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+            </div>
+            <p class="project-desc"><I></I>Which tech skills in 2026 take the longest fill?, Which technology domains
+              have the most demands? This compelling data storytelling will answer those questions.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Analytics</span>
+              <span class="project-tag">Machine Learning</span>
+              <span class="project-tag">Tableau</span>
+              <span class="project-tag">Python</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section id="certs" class="section">
+    <div class="container">
+      <div class="section-header-row">
+        <h2 class="section-title">Certifications</h2>
+        <a class="view-more-btn" href="certificates/">
+          <span>View more</span>
+          <span aria-hidden="true" class="view-more-arrow">→</span>
+        </a>
+      </div>
+      <div class="certs-grid">
+        <a class="cert-card" href="https://www.credly.com/badges/abc2f4f7-e9bf-4884-9aa6-9218abd6d583/public_url"
+          target="_blank" rel="noopener noreferrer">
+          <svg class="cert-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="8" r="7"></circle>
+            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+          </svg>
+          <div class="cert-text">
+            <h3 class="cert-title">Google Advanced Data Analytics</h3>
+            <p class="cert-issuer">Google</p>
+          </div>
+          <svg class="cert-link-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+            <polyline points="15 3 21 3 21 9" />
+            <line x1="10" y1="14" x2="21" y2="3" />
+          </svg>
+        </a>
+
+
+
+        <a class="cert-card" href="https://www.credly.com/badges/62b35ecb-8980-4646-8092-2fb044e3cc5d/public_url"
+          target="_blank" rel="noopener noreferrer">
+          <svg class="cert-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="8" r="7"></circle>
+            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+          </svg>
+          <div class="cert-text">
+            <h3 class="cert-title">Data Analytics Essentials</h3>
+            <p class="cert-issuer">Cisco Networking Academy</p>
+          </div>
+          <svg class="cert-link-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+            <polyline points="15 3 21 3 21 9" />
+            <line x1="10" y1="14" x2="21" y2="3" />
+          </svg>
+        </a>
+
+        <a class="cert-card" href="https://www.credly.com/badges/0b1acde8-b04a-4aeb-a7cb-efa0ec8e913a/public_url"
+          target="_blank" rel="noopener noreferrer">
+          <svg class="cert-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="8" r="7"></circle>
+            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+          </svg>
+          <div class="cert-text">
+            <h3 class="cert-title">Data Science With Python</h3>
+            <p class="cert-issuer">Cisco Networking Academy</p>
+          </div>
+          <svg class="cert-link-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+            <polyline points="15 3 21 3 21 9" />
+            <line x1="10" y1="14" x2="21" y2="3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <footer id="contact" class="footer">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <p class="contact-text">Open to opportunities and collaborations. Let's build something together.</p>
+      <div class="social-links">
+        <a href="https://github.com/anthonyFalter" target="_blank" rel="noopener noreferrer" class="social-link"
+          aria-label="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/ross-elopre" target="_blank" rel="noopener noreferrer" class="social-link"
+          aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+            <rect x="2" y="9" width="4" height="12" />
+            <circle cx="4" cy="4" r="2" />
+          </svg>
+        </a>
+        <a href="mailto:rosselopre.business@gmail.com" class="social-link" aria-label="Email">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            style="pointer-events: none;">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+            <polyline points="22,6 12,13 2,6" />
+          </svg>
+        </a>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Ross Elopre</p>
+        <button id="back-top" class="back-top">
+          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="19" x2="12" y2="5" />
+            <polyline points="5 12 12 5 19 12" />
+          </svg>
+          Top
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

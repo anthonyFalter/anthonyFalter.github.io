@@ -322,6 +322,12 @@ function initCertificateFilters() {
   const genres = Array.from(new Set(cardData.flatMap(item => item.tags))).sort();
   const defaultSelectedGenre = 'Specialization';
 
+  const genreCount = {};
+  genres.forEach(genre => { genreCount[genre] = 0; });
+  cardData.forEach(({ tags }) => {
+    tags.forEach(tag => { if (genreCount[tag] !== undefined) genreCount[tag]++; });
+  });
+
   genres.forEach(genre => {
     const id = `certificate-genre-${genre.toLowerCase().replace(/\s+/g, '-')}`;
     const label = document.createElement('label');
@@ -341,7 +347,11 @@ function initCertificateFilters() {
     span.className = 'filter-genre-label';
     span.textContent = genre;
 
-    label.append(checkbox, span);
+    const count = document.createElement('span');
+    count.className = 'filter-genre-count';
+    count.textContent = genreCount[genre];
+
+    label.append(checkbox, span, count);
     genreContainer.append(label);
   });
 
